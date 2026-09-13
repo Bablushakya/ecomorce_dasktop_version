@@ -1,0 +1,2389 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>GuiltFree Cravings | 100% Pure Desi Ghee Sweets • Zero Refined Sugar</title>
+  <meta name="description" content="Handcrafted traditional Indian sweets made with 100% pure desi cow ghee, organic dates & raw jaggery. Zero refined sugar, zero preservatives." />
+
+  <!-- Google Fonts: Playfair Display + Plus Jakarta Sans + Cinzel -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN with plugins -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              dark: '#1C100B',
+              brown: '#2C1810',
+              brownLight: '#3D2217',
+              amber: '#B45309',
+              gold: '#D97706',
+              goldLight: '#F59E0B',
+              goldPale: '#FEF3C7',
+              cream: '#FCF9F2',
+              warmBg: '#F5EFE6',
+              cardBg: '#FFFFFF',
+              border: '#E8DFD3',
+              borderLight: '#F0E9DF',
+              emerald: '#15803D'
+            }
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            display: ['"Cinzel"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'sans-serif']
+          },
+          boxShadow: {
+            'luxury': '0 10px 30px -5px rgba(44, 24, 16, 0.08), 0 4px 6px -2px rgba(44, 24, 16, 0.04)',
+            'luxury-hover': '0 20px 40px -10px rgba(44, 24, 16, 0.16), 0 8px 16px -4px rgba(44, 24, 16, 0.08)',
+            'glow-gold': '0 0 25px rgba(217, 119, 6, 0.25)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom luxury scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #F5EFE6;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #D1C4B5;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #B45309;
+    }
+
+    /* Modal and drawer transitions */
+    .drawer-transition {
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.35s ease;
+    }
+    .modal-backdrop {
+      background-color: rgba(28, 16, 11, 0.7);
+      backdrop-filter: blur(6px);
+    }
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    /* Shimmer effect on loading/special badges */
+    @keyframes shimmer {
+      0% { background-position: -200% 0; }
+      100% { background-position: 200% 0; }
+    }
+    .shimmer-badge {
+      background: linear-gradient(90deg, rgba(217,119,6,0.15) 0%, rgba(217,119,6,0.35) 50%, rgba(217,119,6,0.15) 100%);
+      background-size: 200% 100%;
+      animation: shimmer 3s infinite;
+    }
+
+    /* Image zoom on hover */
+    .product-img-container img {
+      transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .product-card:hover .product-img-container img {
+      transform: scale(1.05);
+    }
+
+    /* Enhanced button transitions */
+    button, a {
+      transition: all 0.2s ease-out;
+    }
+
+    /* Focus states for accessibility */
+    a:focus-visible, button:focus-visible {
+      outline: 2px solid #B45309;
+      outline-offset: 2px;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+
+<body class="bg-brand-cream text-brand-dark font-sans antialiased selection:bg-brand-amber selection:text-white flex flex-col min-h-screen">
+
+  <!-- ========================================== -->
+  <!-- FLOATING NAVBAR - COMPACT SIZE -->
+  <!-- ========================================== -->
+  <header class="sticky top-0 z-40 py-3 px-4">
+    <div class="max-w-[1650px] mx-auto">
+      <!-- Main Floating Navbar Container - Reduced Height -->
+      <div class="bg-white/30 backdrop-blur-md rounded-[40px] shadow-[0_8px_32px_rgba(44,24,16,0.08)] border border-amber-900/10 px-6 py-2.5 flex items-center justify-between">
+        
+        <!-- Left: Logo - Smaller Size -->
+        <a href="#" class="flex items-center gap-2.5 group focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-amber focus-visible:ring-offset-2 rounded-lg transition-transform hover:scale-[1.02] duration-200">
+          <div class="relative w-10 h-10 rounded-full overflow-hidden border-2 border-brand-gold/60 shadow-sm">
+            <img src="assets/images/logo.jpg" alt="GuiltFree Cravings Logo" class="w-full h-full object-cover" />
+          </div>
+          <div>
+            <span class="font-serif text-xl font-bold tracking-tight text-brand-dark block leading-none">
+              Guilt<span class="text-brand-gold">Free</span> Cravings
+            </span>
+          </div>
+        </a>
+
+        <!-- Center: Rounded Navigation Container - Compact -->
+        <nav class="hidden lg:flex items-center bg-[#F5EDE4]/60 backdrop-blur-sm rounded-[32px] shadow-sm border border-amber-900/8 px-2 py-1.5 gap-1">
+          <a href="#" class="nav-link-floating px-5 py-2 text-[15px] font-medium text-[#3D2217] hover:text-brand-amber hover:bg-white/60 rounded-[28px] transition-all duration-200">
+            Home
+          </a>
+          <a href="#products" class="nav-link-floating px-5 py-2 text-[15px] font-medium text-[#3D2217] hover:text-brand-amber hover:bg-white/60 rounded-[28px] transition-all duration-200">
+            Shop
+          </a>
+          <a href="#our-story" class="nav-link-floating px-5 py-2 text-[15px] font-medium text-[#3D2217] hover:text-brand-amber hover:bg-white/60 rounded-[28px] transition-all duration-200">
+            Our Story
+          </a>
+          <a href="#why-choose" class="nav-link-floating px-5 py-2 text-[15px] font-medium text-[#3D2217] hover:text-brand-amber hover:bg-white/60 rounded-[28px] transition-all duration-200">
+            Why Us
+          </a>
+        </nav>
+
+        <!-- Mobile Menu Button -->
+        <button 
+          id="mobileMenuBtn"
+          onclick="toggleMobileMenu()"
+          class="lg:hidden p-2 text-stone-700 hover:text-brand-amber hover:bg-brand-warmBg/50 rounded-2xl transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-amber"
+          aria-label="Toggle menu"
+        >
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+
+        <!-- Right: Cart + Login - Compact -->
+        <div class="hidden lg:flex items-center gap-3">
+          
+          <!-- Cart Button - Smaller -->
+          <button
+            onclick="toggleCartDrawer(true)"
+            class="relative p-2.5 bg-white/80 hover:bg-white text-[#3D2217] hover:text-brand-amber rounded-full transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-amber border border-amber-900/10 shadow-sm"
+            title="View Cart"
+          >
+            <svg class="w-[18px] h-[18px]" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+            </svg>
+            <span id="cartCountBadge" class="absolute -top-1 -right-1 bg-[#D97706] text-white text-[10px] font-bold min-w-[18px] h-[18px] rounded-full flex items-center justify-center px-1 shadow-sm">0</span>
+          </button>
+
+          <!-- Login Button - Compact -->
+          <button
+            onclick="openLoginModal()"
+            class="bg-[#3D2217] hover:bg-[#2C1810] text-white font-semibold text-[14px] px-5 py-2 rounded-[26px] transition-all duration-200 shadow-md hover:shadow-lg flex items-center gap-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-amber focus-visible:ring-offset-2"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+            </svg>
+            <span>Login</span>
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </button>
+
+        </div>
+
+        <!-- Mobile: Cart Only -->
+        <div class="flex lg:hidden items-center gap-2">
+          <button
+            onclick="toggleCartDrawer(true)"
+            class="relative p-2 bg-white/80 text-stone-700 hover:text-brand-amber rounded-full transition-all duration-200 border border-amber-900/10"
+            title="View Cart"
+          >
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+            </svg>
+            <span id="cartCountBadgeMobile" class="absolute -top-1 -right-1 bg-[#D97706] text-white text-[10px] font-bold min-w-[16px] h-[16px] rounded-full flex items-center justify-center px-1">0</span>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Menu -->
+    <div id="mobileMenu" class="hidden lg:hidden mt-3 mx-4">
+      <div class="max-w-[1650px] mx-auto">
+        <div class="bg-white/95 backdrop-blur-md rounded-[28px] shadow-lg border border-amber-900/10 p-4 space-y-1.5">
+          <a href="#" class="block px-4 py-2.5 text-[15px] font-medium text-[#3D2217] hover:text-brand-amber hover:bg-brand-warmBg/50 rounded-[20px] transition-all duration-200">
+            Home
+          </a>
+          <a href="#products" onclick="toggleMobileMenu()" class="block px-4 py-2.5 text-[15px] font-medium text-[#3D2217] hover:text-brand-amber hover:bg-brand-warmBg/50 rounded-[20px] transition-all duration-200">
+            Shop
+          </a>
+          <a href="#our-story" onclick="toggleMobileMenu()" class="block px-4 py-2.5 text-[15px] font-medium text-[#3D2217] hover:text-brand-amber hover:bg-brand-warmBg/50 rounded-[20px] transition-all duration-200">
+            Our Story
+          </a>
+          <a href="#why-choose" onclick="toggleMobileMenu()" class="block px-4 py-2.5 text-[15px] font-medium text-[#3D2217] hover:text-brand-amber hover:bg-brand-warmBg/50 rounded-[20px] transition-all duration-200">
+            Why Us
+          </a>
+          <div class="pt-2 border-t border-stone-200/60">
+            <button
+              onclick="openLoginModal(); toggleMobileMenu();"
+              class="w-full bg-[#3D2217] hover:bg-[#2C1810] text-white font-semibold text-[14px] px-5 py-2.5 rounded-[24px] transition-all duration-200 shadow-md flex items-center justify-center gap-2"
+            >
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+              </svg>
+              <span>Login</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================== -->
+  <!-- 3. HERO SECTION                           -->
+  <!-- ========================================== -->
+  <main class="flex-grow">
+    <section class="relative bg-gradient-to-b from-brand-warmBg via-brand-cream to-brand-cream border-b border-brand-border py-10 lg:py-16 overflow-hidden">
+      <!-- Glow effect -->
+      <div class="absolute top-1/3 left-1/2 -translate-x-1/2 w-[550px] h-[550px] bg-amber-200/35 rounded-full blur-3xl pointer-events-none"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
+          
+          <!-- Left Hero Column -->
+          <div class="lg:col-span-7 space-y-6">
+            
+            <div class="inline-flex items-center space-x-2 bg-white border border-brand-gold/40 px-3.5 py-1.5 rounded-full text-xs font-semibold tracking-wide text-brand-brown shadow-xs">
+              <span class="w-2 h-2 rounded-full bg-brand-gold animate-ping"></span>
+              <span class="w-2 h-2 rounded-full bg-brand-gold -ml-3"></span>
+              <span>Homemade Goodness • Made with Love</span>
+            </div>
+
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-brand-dark tracking-tight leading-[1.15]">
+              Wholesome Goodness, <br/>
+              <span class="italic text-brand-amber font-normal">Irresistible Taste.</span>
+            </h1>
+
+            <p class="text-base sm:text-lg text-stone-600 max-w-xl leading-relaxed">
+              Delicious homemade treats crafted with thoughtfully selected ingredients, comforting flavours, and a whole lot of love — made to bring a little more joy to every craving.
+            </p>
+
+            <!-- 3 Trust Micro-Badges -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2 max-w-xl">
+              <div class="flex items-center space-x-3 bg-white/90 p-4 rounded-xl border border-brand-border shadow-xs hover:border-brand-gold/60 transition-colors duration-200">
+                <span class="text-3xl">🧈</span>
+                <div class="leading-tight">
+                  <p class="text-sm font-bold text-brand-dark">Pure Desi Ghee</p>
+                  <p class="text-xs text-stone-500">Hand-rolled with care</p>
+                </div>
+              </div>
+
+              <div class="flex items-center space-x-3 bg-white/90 p-4 rounded-xl border border-brand-border shadow-xs hover:border-brand-gold/60 transition-colors duration-200">
+                <span class="text-3xl">🍯</span>
+                <div class="leading-tight">
+                  <p class="text-sm font-bold text-brand-dark">No Refined Sugar</p>
+                  <p class="text-xs text-stone-500">Jaggery & Dates only</p>
+                </div>
+              </div>
+
+              <div class="flex items-center space-x-3 bg-white/90 p-4 rounded-xl border border-brand-border shadow-xs hover:border-brand-gold/60 transition-colors duration-200">
+                <span class="text-3xl">🌱</span>
+                <div class="leading-tight">
+                  <p class="text-sm font-bold text-brand-dark">No Preservatives</p>
+                  <p class="text-xs text-stone-500">Fresh & wholesome</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- CTA Buttons with Clear Hierarchy -->
+            <div class="flex flex-wrap items-center gap-4 pt-3">
+              <a
+                href="#products"
+                class="bg-brand-brown hover:bg-brand-dark text-white font-bold text-base px-10 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-200 transform hover:-translate-y-0.5 flex items-center space-x-2 border border-brand-gold/40"
+              >
+                <span>Shop Collection</span>
+                <svg class="w-5 h-5 text-amber-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                </svg>
+              </a>
+
+              <a
+                href="#our-story"
+                class="bg-transparent hover:bg-stone-50 text-stone-700 hover:text-brand-dark font-semibold text-base px-8 py-4 rounded-full border-2 border-stone-300 hover:border-stone-400 transition-all duration-200"
+              >
+                Our Story
+              </a>
+            </div>
+
+            <!-- Customer Trust Proof -->
+            <div class="flex items-center space-x-3 pt-3 text-sm text-stone-600">
+              <div class="flex text-amber-500 text-base">
+                ★★★★★
+              </div>
+              <span class="font-bold text-stone-900">4.9 / 5.0</span>
+              <span class="text-stone-400">·</span>
+              <span>1,480+ reviews across India</span>
+            </div>
+
+          </div>
+
+          <!-- Right Hero Column: Real Photography Showcase -->
+          <div class="lg:col-span-5 relative">
+            <div class="relative mx-auto max-w-md lg:max-w-none">
+              
+              <!-- Luxury Frame Card -->
+              <div class="bg-white rounded-3xl p-4 sm:p-5 shadow-2xl border border-brand-border/80 relative overflow-hidden group">
+                
+                <div class="relative rounded-2xl overflow-hidden bg-brand-warmBg aspect-[4/3] flex items-center justify-center">
+                  <img
+                    src="assets/images/hero_image.png"
+                    alt="GuiltFree Cravings Artisanal Sweets"
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  />
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                  
+                  <!-- Floating Top Badge -->
+                  <div class="absolute top-3 left-3 bg-brand-brown/95 text-amber-300 text-[11px] font-bold px-3 py-1 rounded-full shadow-md backdrop-blur-xs border border-brand-gold/30">
+                    ★ Hand-rolled Fresh Today
+                  </div>
+
+                  <!-- Overlay Title on Image -->
+                  <div class="absolute bottom-3 left-3 right-3 text-white">
+                    <p class="font-serif text-lg sm:text-xl font-bold drop-shadow">Artisanal Desi Ghee Confectionery</p>
+                    <p class="text-xs text-amber-200">Slow-roasted Chana Sattu, California Almonds & Medjool Dates</p>
+                  </div>
+                </div>
+
+                <!-- Bottom Quick-Pick Pill -->
+                <div class="bg-brand-warmBg/70 rounded-xl p-3 mt-3 flex items-center justify-between border border-brand-border">
+                  <div class="text-left">
+                    <p class="text-[10px] text-brand-amber uppercase tracking-wider font-bold">Featured Bestseller</p>
+                    <p class="text-xs sm:text-sm font-bold text-stone-900">Dry Fruit Sattu Laddoo (250g)</p>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <span class="text-base sm:text-lg font-bold font-mono text-brand-amber">₹250</span>
+                    <button
+                      onclick="quickAddToCart(0)"
+                      class="bg-brand-brown hover:bg-brand-dark text-white p-2 rounded-lg transition shadow-xs flex items-center justify-center active:scale-95"
+                      title="Quick Add to Bag"
+                    >
+                      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Floating Quality Tag -->
+              <div class="absolute -bottom-3 -left-3 bg-white border border-brand-gold/40 px-3.5 py-2 rounded-xl shadow-lg flex items-center space-x-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+                <span class="text-xs font-bold text-stone-800">Clean Food Lab Certified</span>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 4. QUICK CATEGORY FILTER BAR & SORTING     -->
+    <!-- ========================================== -->
+    <section class="border-b border-brand-border bg-white sticky top-20 z-30 shadow-xs">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+        <div class="flex items-center justify-between overflow-x-auto no-scrollbar gap-3">
+          
+          <div class="flex items-center space-x-2 min-w-max">
+            <button
+              data-cat="all"
+              class="category-pill active bg-brand-brown text-white text-xs font-semibold px-4 py-2 rounded-full transition shadow-xs"
+              onclick="filterCategory('all', this)"
+            >
+              All Treats (6)
+            </button>
+            <button
+              data-cat="sattu"
+              class="category-pill bg-brand-warmBg hover:bg-stone-200 text-stone-700 text-xs font-semibold px-4 py-2 rounded-full transition"
+              onclick="filterCategory('sattu', this)"
+            >
+              🌾 Roasted Sattu
+            </button>
+            <button
+              data-cat="dates"
+              class="category-pill bg-brand-warmBg hover:bg-stone-200 text-stone-700 text-xs font-semibold px-4 py-2 rounded-full transition"
+              onclick="filterCategory('dates', this)"
+            >
+              🍯 Dates & Nuts
+            </button>
+            <button
+              data-cat="besan"
+              class="category-pill bg-brand-warmBg hover:bg-stone-200 text-stone-700 text-xs font-semibold px-4 py-2 rounded-full transition"
+              onclick="filterCategory('besan', this)"
+            >
+              🧈 Pure Besan Badam
+            </button>
+            <button
+              data-cat="glass-jar"
+              class="category-pill bg-brand-warmBg hover:bg-stone-200 text-stone-700 text-xs font-semibold px-4 py-2 rounded-full transition"
+              onclick="filterCategory('glass-jar', this)"
+            >
+              ✨ Reusable Glass Jars
+            </button>
+          </div>
+
+          <div class="hidden md:flex items-center space-x-3 text-xs text-stone-600 font-semibold min-w-max">
+            <span>Sort By:</span>
+            <select
+              id="sortSelect"
+              onchange="sortProducts(this.value)"
+              class="text-xs py-1.5 px-3 border-stone-300 rounded-lg focus:ring-brand-gold focus:border-brand-gold bg-stone-50 text-stone-800 font-medium"
+            >
+              <option value="featured">Featured Favorites</option>
+              <option value="price-low">Price: Low to High</option>
+              <option value="price-high">Price: High to Low</option>
+              <option value="rating">Highest Rated</option>
+            </select>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 5. PRODUCT CATALOG GRID                    -->
+    <!-- ========================================== -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14" id="products">
+      
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <span class="text-xs font-bold uppercase tracking-widest text-brand-amber bg-amber-100/80 px-3.5 py-1.5 rounded-full border border-amber-300/60">
+          Handcrafted With Love
+        </span>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-brand-dark mt-4">
+          Best Selling Laddoos
+        </h2>
+        <p class="text-stone-600 mt-3 text-base leading-relaxed">
+          Four recipes, zero regret. The sweet spot where taste meets tradition.
+        </p>
+        <p class="text-brand-amber font-serif font-medium text-sm mt-2">
+          Pick 250g to fall in love. Pick 500g because you already have.
+        </p>
+      </div>
+
+      <!-- Responsive 4-Column Product Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8" id="productContainer">
+        <!-- Rendered dynamically by JS -->
+      </div>
+
+      <!-- ======================================== -->
+      <!-- 6. TRADITIONAL GLASS JAR GIFT SUITE      -->
+      <!-- ======================================== -->
+      <div class="mt-24 pt-16 border-t border-brand-border" id="glass-jars">
+        
+        <div class="text-center max-w-2xl mx-auto mb-14">
+          <span class="text-xs font-bold uppercase tracking-widest text-brand-amber bg-amber-100/80 px-3.5 py-1.5 rounded-full border border-amber-300/60">
+            Premium Packaging
+          </span>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-brand-dark mt-4">
+            Reusable Glass Jar Collection
+          </h2>
+          <p class="text-stone-600 mt-3 text-base leading-relaxed">
+            Food-grade airtight glass decanters. Elegant, sustainable, and keeps the pure desi ghee aroma locked in for weeks.
+          </p>
+        </div>
+
+        <!-- Glass Jar 2-Column Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto" id="glassJarContainer">
+          <!-- Rendered dynamically by JS -->
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 6.5. WHY CHOOSE / BENEFITS SECTION         -->
+    <!-- ========================================== -->
+    <section class="bg-white py-16 lg:py-20 border-y border-brand-border" id="why-choose">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-2xl mx-auto mb-14">
+          <span class="text-xs font-bold uppercase tracking-widest text-brand-amber bg-amber-100/80 px-3.5 py-1.5 rounded-full border border-amber-300/60">
+            Why Choose Us
+          </span>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-brand-dark mt-4">
+            Every Craving, Guilt-Free
+          </h2>
+          <p class="text-stone-600 mt-3 text-base leading-relaxed">
+            We believe in doing things with meaning, choosing ingredients with care, and making food with genuine love.
+          </p>
+        </div>
+
+        <!-- Main 3 Benefits Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-14">
+          
+          <div class="bg-brand-warmBg/40 p-10 rounded-2xl border border-brand-border hover:shadow-luxury transition-all duration-300 text-center">
+            <div class="w-16 h-16 bg-amber-100 text-brand-amber rounded-full flex items-center justify-center mx-auto mb-5 text-3xl">
+              🍯
+            </div>
+            <h3 class="text-xl font-serif font-bold text-brand-dark mb-3">No Refined Sugar</h3>
+            <p class="text-stone-600 text-[15px] leading-relaxed">
+              Only jaggery and dates do the sweetening here — pure, natural, and guilt free.
+            </p>
+          </div>
+
+          <div class="bg-brand-warmBg/40 p-10 rounded-2xl border border-brand-border hover:shadow-luxury transition-all duration-300 text-center">
+            <div class="w-16 h-16 bg-emerald-100 text-emerald-700 rounded-full flex items-center justify-center mx-auto mb-5 text-3xl">
+              🌱
+            </div>
+            <h3 class="text-xl font-serif font-bold text-brand-dark mb-3">No Preservatives</h3>
+            <p class="text-stone-600 text-[15px] leading-relaxed">
+              Small batch, made to be eaten fresh, not stored forever. Real food, real simple.
+            </p>
+          </div>
+
+          <div class="bg-brand-warmBg/40 p-10 rounded-2xl border border-brand-border hover:shadow-luxury transition-all duration-300 text-center">
+            <div class="w-16 h-16 bg-sky-100 text-sky-700 rounded-full flex items-center justify-center mx-auto mb-5 text-3xl">
+              ✨
+            </div>
+            <h3 class="text-xl font-serif font-bold text-brand-dark mb-3">Thoughtfully Sourced</h3>
+            <p class="text-stone-600 text-[15px] leading-relaxed">
+              Real, clean ingredients, nothing borrowed from a lab. Just honest, wholesome ingredients.
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Trust Indicators Grid -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+          
+          <div class="bg-white p-6 rounded-xl border border-brand-border text-center hover:border-brand-gold/60 transition-colors duration-200">
+            <div class="text-3xl mb-3">🌿</div>
+            <p class="text-sm font-bold text-brand-dark">100% Natural</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-xl border border-brand-border text-center hover:border-brand-gold/60 transition-colors duration-200">
+            <div class="text-3xl mb-3">❤️</div>
+            <p class="text-sm font-bold text-brand-dark">Made with Love</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-xl border border-brand-border text-center hover:border-brand-gold/60 transition-colors duration-200">
+            <div class="text-3xl mb-3">🔥</div>
+            <p class="text-sm font-bold text-brand-dark">Freshly Baked Daily</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-xl border border-brand-border text-center hover:border-brand-gold/60 transition-colors duration-200">
+            <div class="text-3xl mb-3">⭐</div>
+            <p class="text-sm font-bold text-brand-dark">Trusted Brand</p>
+          </div>
+
+        </div>
+
+        <!-- Customer Use Cases -->
+        <div class="mt-20 bg-brand-warmBg/60 rounded-3xl border border-brand-border p-10 sm:p-12 max-w-5xl mx-auto">
+          <div class="text-center mb-10">
+            <h3 class="text-2xl sm:text-3xl font-serif font-bold text-brand-dark mb-3">
+              Better Choices for Everyone
+            </h3>
+            <p class="text-stone-600 text-base">Wholesome goodness for every moment</p>
+          </div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            <div class="bg-white p-8 rounded-xl border border-brand-border hover:shadow-md transition-shadow duration-300">
+              <div class="flex items-center space-x-3 mb-4">
+                <div class="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center text-2xl">
+                  🎒
+                </div>
+                <h4 class="font-serif font-bold text-lg text-brand-dark">For Growing Kids</h4>
+              </div>
+              <p class="text-stone-600 text-[15px] leading-relaxed">
+                A wholesome burst of energy for school.
+              </p>
+            </div>
+
+            <div class="bg-white p-8 rounded-xl border border-brand-border hover:shadow-md transition-shadow duration-300">
+              <div class="flex items-center space-x-3 mb-4">
+                <div class="w-12 h-12 bg-rose-100 rounded-full flex items-center justify-center text-2xl">
+                  💼
+                </div>
+                <h4 class="font-serif font-bold text-lg text-brand-dark">For Busy Women</h4>
+              </div>
+              <p class="text-stone-600 text-[15px] leading-relaxed">
+                Something nourishing when the day gets long.
+              </p>
+            </div>
+
+            <div class="bg-white p-8 rounded-xl border border-brand-border hover:shadow-md transition-shadow duration-300">
+              <div class="flex items-center space-x-3 mb-4">
+                <div class="w-12 h-12 bg-sky-100 rounded-full flex items-center justify-center text-2xl">
+                  ☕
+                </div>
+                <h4 class="font-serif font-bold text-lg text-brand-dark">For Everyone</h4>
+              </div>
+              <p class="text-stone-600 text-[15px] leading-relaxed">
+                A better bite between meetings.
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 7. BRAND STORY & PHILOSOPHY               -->
+    <!-- ========================================== -->
+    <section class="bg-brand-warmBg/60 border-y border-brand-border py-16 lg:py-24" id="our-story">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="max-w-3xl mx-auto text-center space-y-4 mb-16">
+          <span class="text-xs font-bold uppercase tracking-widest text-brand-amber bg-amber-100/80 px-3.5 py-1.5 rounded-full border border-amber-300/60">
+            Our Story
+          </span>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-brand-dark">
+            Made with Love, Eaten with Joy
+          </h2>
+          <p class="text-stone-600 text-base leading-relaxed">
+            Somewhere between <em>"I shouldn't"</em> and <em>"just one bite"</em> we found a better answer. Laddoos rolled by hand, made with desi ghee, studded with real nuts, and sweetened only with jaggery and dates. <strong>Rooted in tradition, made for today.</strong>
+          </p>
+        </div>
+
+        <!-- 3-Pillar Ingredients Breakdown -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-16">
+          
+          <div class="bg-white p-10 rounded-2xl border border-brand-border shadow-luxury hover:shadow-luxury-hover transition-all duration-300 flex flex-col justify-between">
+            <div>
+              <span class="text-sm font-bold text-stone-400 font-mono uppercase tracking-wider">01 / Staple</span>
+              <h3 class="text-2xl font-serif font-bold text-brand-dark mt-3 mb-4">Sattu</h3>
+              <p class="text-stone-600 text-[15px] leading-relaxed">
+                For natural energy and the goodness of a trusted Indian staple. Slow-roasted over low heat, releasing nutty perfection — honest, nourishing food for everyday moments.
+              </p>
+            </div>
+            <div class="mt-5 pt-4 border-t border-stone-100 text-sm text-brand-amber font-bold flex items-center gap-2">
+              <span>🌾 Natural Energy & Goodness</span>
+            </div>
+          </div>
+
+          <div class="bg-white p-10 rounded-2xl border border-brand-border shadow-luxury hover:shadow-luxury-hover transition-all duration-300 flex flex-col justify-between">
+            <div>
+              <span class="text-sm font-bold text-stone-400 font-mono uppercase tracking-wider">02 / Sweetener</span>
+              <h3 class="text-2xl font-serif font-bold text-brand-dark mt-3 mb-4">Dates & Jaggery</h3>
+              <p class="text-stone-600 text-[15px] leading-relaxed">
+                Clean, natural sweetness straight from nature. Because sweetness doesn't need to be refined — it just needs to be thoughtfully chosen.
+              </p>
+            </div>
+            <div class="mt-5 pt-4 border-t border-stone-100 text-sm text-brand-amber font-bold flex items-center gap-2">
+              <span>🍯 0g Refined Cane Sugar</span>
+            </div>
+          </div>
+
+          <div class="bg-white p-10 rounded-2xl border border-brand-border shadow-luxury hover:shadow-luxury-hover transition-all duration-300 flex flex-col justify-between">
+            <div>
+              <span class="text-sm font-bold text-stone-400 font-mono uppercase tracking-wider">03 / Fat Source</span>
+              <h3 class="text-2xl font-serif font-bold text-brand-dark mt-3 mb-4">Desi Ghee</h3>
+              <p class="text-stone-600 text-[15px] leading-relaxed">
+                Because good fats were never meant to be the villain. Real danedar cow ghee, slow-churned and full of that unmistakable aroma the moment you open the lid.
+              </p>
+            </div>
+            <div class="mt-5 pt-4 border-t border-stone-100 text-sm text-brand-amber font-bold flex items-center gap-2">
+              <span>🧈 Pure Danedar Aroma</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Comparison: Two-Column Approach -->
+        <div class="bg-white rounded-3xl border border-brand-border overflow-hidden shadow-luxury max-w-5xl mx-auto">
+          <div class="bg-brand-brown text-white p-8 text-center border-b border-brand-gold/30">
+            <h3 class="font-serif text-2xl font-bold">Simple Choices, Better Ingredients</h3>
+            <p class="text-sm text-amber-200 mt-2 leading-relaxed">We believe you shouldn't have to read the fine print to know what's going into something you eat. No shortcuts.</p>
+          </div>
+          <div class="p-8 sm:p-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+              
+              <!-- Typical Commercial Column -->
+              <div>
+                <h4 class="font-serif text-lg font-bold text-red-700 mb-6 pb-3 border-b-2 border-red-200">Typical Commercial Sweets</h4>
+                <ul class="space-y-4 text-[15px]">
+                  <li class="flex items-start space-x-3">
+                    <span class="text-red-500 text-xl shrink-0">✕</span>
+                    <div>
+                      <p class="font-semibold text-stone-800">Refined White Sugar</p>
+                      <p class="text-stone-500 text-sm">High fructose corn syrup</p>
+                    </div>
+                  </li>
+                  <li class="flex items-start space-x-3">
+                    <span class="text-red-500 text-xl shrink-0">✕</span>
+                    <div>
+                      <p class="font-semibold text-stone-800">Hydrogenated Fats</p>
+                      <p class="text-stone-500 text-sm">Palm oil, vanaspati, trans-fats</p>
+                    </div>
+                  </li>
+                  <li class="flex items-start space-x-3">
+                    <span class="text-red-500 text-xl shrink-0">✕</span>
+                    <div>
+                      <p class="font-semibold text-stone-800">Artificial Preservatives</p>
+                      <p class="text-stone-500 text-sm">INS 211, potassium sorbate, artificial colors</p>
+                    </div>
+                  </li>
+                  <li class="flex items-start space-x-3">
+                    <span class="text-red-500 text-xl shrink-0">✕</span>
+                    <div>
+                      <p class="font-semibold text-stone-800">Single-Use Plastic</p>
+                      <p class="text-stone-500 text-sm">Non-recyclable packaging</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- GuiltFree Column -->
+              <div>
+                <h4 class="font-serif text-lg font-bold text-emerald-800 mb-6 pb-3 border-b-2 border-emerald-200">GuiltFree Cravings</h4>
+                <ul class="space-y-4 text-[15px]">
+                  <li class="flex items-start space-x-3">
+                    <span class="text-emerald-600 text-xl shrink-0">✓</span>
+                    <div>
+                      <p class="font-semibold text-stone-800">Organic Jaggery & Dates</p>
+                      <p class="text-stone-500 text-sm">Natural sweetness only</p>
+                    </div>
+                  </li>
+                  <li class="flex items-start space-x-3">
+                    <span class="text-emerald-600 text-xl shrink-0">✓</span>
+                    <div>
+                      <p class="font-semibold text-stone-800">Pure Desi Cow Ghee</p>
+                      <p class="text-stone-500 text-sm">100% danedar, slow-churned</p>
+                    </div>
+                  </li>
+                  <li class="flex items-start space-x-3">
+                    <span class="text-emerald-600 text-xl shrink-0">✓</span>
+                    <div>
+                      <p class="font-semibold text-stone-800">Zero Preservatives</p>
+                      <p class="text-stone-500 text-sm">Fresh kitchen batches daily</p>
+                    </div>
+                  </li>
+                  <li class="flex items-start space-x-3">
+                    <span class="text-emerald-600 text-xl shrink-0">✓</span>
+                    <div>
+                      <p class="font-semibold text-stone-800">Reusable Glass Jars</p>
+                      <p class="text-stone-500 text-sm">Food-grade, airtight, sustainable</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 8. BRAND PROMISE PILLARS                  -->
+    <!-- ========================================== -->
+    <section class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" id="promise">
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <span class="text-xs font-bold uppercase tracking-widest text-brand-amber bg-amber-100/80 px-3.5 py-1.5 rounded-full border border-amber-300/60">
+          Our Promise
+        </span>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-brand-dark mt-4">
+          Nourishment You Can Taste, Tradition You Can Trust
+        </h2>
+        <p class="text-stone-600 text-base mt-3 leading-relaxed">We put care into every detail so you can enjoy every bite.</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        
+        <div class="bg-white p-8 rounded-2xl border border-brand-border text-center hover:shadow-luxury transition-all duration-300">
+          <div class="w-14 h-14 bg-amber-100 text-brand-amber rounded-full flex items-center justify-center mx-auto text-2xl mb-5">
+            🌾
+          </div>
+          <h4 class="font-serif font-bold text-lg text-brand-dark mb-2">Quality Ingredients</h4>
+          <p class="text-[15px] text-stone-600 leading-relaxed">Thoughtfully selected ingredients to create delicious treats you can enjoy with confidence.</p>
+        </div>
+
+        <div class="bg-white p-8 rounded-2xl border border-brand-border text-center hover:shadow-luxury transition-all duration-300">
+          <div class="w-14 h-14 bg-rose-100 text-rose-600 rounded-full flex items-center justify-center mx-auto text-2xl mb-5">
+            ❤️
+          </div>
+          <h4 class="font-serif font-bold text-lg text-brand-dark mb-2">Made with Care</h4>
+          <p class="text-[15px] text-stone-600 leading-relaxed">Every treat is prepared with attention to detail, care, and a passion for taste.</p>
+        </div>
+
+        <div class="bg-white p-8 rounded-2xl border border-brand-border text-center hover:shadow-luxury transition-all duration-300">
+          <div class="w-14 h-14 bg-amber-100 text-amber-600 rounded-full flex items-center justify-center mx-auto text-2xl mb-5">
+            ⭐
+          </div>
+          <h4 class="font-serif font-bold text-lg text-brand-dark mb-2">Delicious Taste</h4>
+          <p class="text-[15px] text-stone-600 leading-relaxed">Delicious flavours that make every craving worth giving in to.</p>
+        </div>
+
+        <div class="bg-white p-8 rounded-2xl border border-brand-border text-center hover:shadow-luxury transition-all duration-300">
+          <div class="w-14 h-14 bg-sky-100 text-sky-600 rounded-full flex items-center justify-center mx-auto text-2xl mb-5">
+            🏡
+          </div>
+          <h4 class="font-serif font-bold text-lg text-brand-dark mb-2">Homemade Goodness</h4>
+          <p class="text-[15px] text-stone-600 leading-relaxed">The warmth and comfort of homemade goodness, made for everyday moments.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 9. TESTIMONIALS & REVIEWS                 -->
+    <!-- ========================================== -->
+    <section class="bg-white border-t border-brand-border py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-xl mx-auto mb-14">
+          <span class="text-xs font-bold uppercase tracking-widest text-brand-amber bg-amber-100/80 px-3.5 py-1.5 rounded-full border border-amber-300/60">
+            Customer Reviews
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-serif font-bold text-brand-dark mt-4">Loved by Families Across India</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          <div class="p-8 rounded-2xl bg-brand-warmBg/40 border border-brand-border flex flex-col justify-between hover:shadow-lg transition-shadow duration-300">
+            <div>
+              <div class="flex text-amber-500 text-lg mb-4">★★★★★</div>
+              <p class="text-stone-700 text-[15px] leading-relaxed mb-6">
+                "Finally a mithai I can give to my kids after school without worrying about a sugar crash! The Sattu and almond crunch is deeply satisfying."
+              </p>
+            </div>
+            <div class="flex items-center space-x-3 pt-4 border-t border-stone-200/60">
+              <div class="w-10 h-10 rounded-full bg-amber-200 font-bold text-sm flex items-center justify-center text-brand-brown">AK</div>
+              <div>
+                <p class="text-sm font-bold text-brand-dark">Ananya K.</p>
+                <p class="text-xs text-stone-500">Mumbai</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-8 rounded-2xl bg-brand-warmBg/40 border border-brand-border flex flex-col justify-between hover:shadow-lg transition-shadow duration-300">
+            <div>
+              <div class="flex text-amber-500 text-lg mb-4">★★★★★</div>
+              <p class="text-stone-700 text-[15px] leading-relaxed mb-6">
+                "My father has strict sugar limitations. The Dates Delight laddoo gave him back his festival joy. The glass jars make them feel like luxury confectionery."
+              </p>
+            </div>
+            <div class="flex items-center space-x-3 pt-4 border-t border-stone-200/60">
+              <div class="w-10 h-10 rounded-full bg-amber-200 font-bold text-sm flex items-center justify-center text-brand-brown">RV</div>
+              <div>
+                <p class="text-sm font-bold text-brand-dark">Rohit Varma</p>
+                <p class="text-xs text-stone-500">New Delhi</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-8 rounded-2xl bg-brand-warmBg/40 border border-brand-border flex flex-col justify-between hover:shadow-lg transition-shadow duration-300">
+            <div>
+              <div class="flex text-amber-500 text-lg mb-4">★★★★★</div>
+              <p class="text-stone-700 text-[15px] leading-relaxed mb-6">
+                "The aroma of pure desi ghee when you open the Besan Badam jar is incredible. You can immediately tell it's made exactly how our grandmother made it."
+              </p>
+            </div>
+            <div class="flex items-center space-x-3 pt-4 border-t border-stone-200/60">
+              <div class="w-10 h-10 rounded-full bg-amber-200 font-bold text-sm flex items-center justify-center text-brand-brown">PS</div>
+              <div>
+                <p class="text-sm font-bold text-brand-dark">Pooja Sharma</p>
+                <p class="text-xs text-stone-500">Bengaluru</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================== -->
+  <!-- 10. MAIN FOOTER                            -->
+  <!-- ========================================== -->
+  <footer class="bg-brand-brown text-stone-300 pt-20 pb-12 border-t border-amber-950/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-14">
+        
+        <!-- Brand Bio Column -->
+        <div class="lg:col-span-2 space-y-5">
+          <div class="flex items-center space-x-3">
+            <img src="assets/images/logo.jpg" alt="Logo" class="w-12 h-12 rounded-full border border-brand-gold" />
+            <span class="font-serif text-2xl font-bold text-white">GuiltFree Cravings</span>
+          </div>
+          <p class="text-sm leading-relaxed text-stone-400 max-w-sm">
+            Delicious treats thoughtfully made for your everyday cravings and special moments. No preservatives, no refined sugar, 100% love.
+          </p>
+          <div class="pt-3 text-xs text-amber-200/80">
+            <span>🛡️ FSSAI Central License #10823999000142</span>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="space-y-4">
+          <h4 class="text-sm font-bold text-white tracking-wider uppercase">Quick Links</h4>
+          <ul class="space-y-3 text-sm text-stone-400">
+            <li><a class="hover:text-amber-300 transition-colors duration-200" href="#">Home</a></li>
+            <li><a class="hover:text-amber-300 transition-colors duration-200" href="#our-story">About Us</a></li>
+            <li><a class="hover:text-amber-300 transition-colors duration-200" href="#products">Products</a></li>
+            <li><a class="hover:text-amber-300 transition-colors duration-200" href="#promise">Our Vision</a></li>
+          </ul>
+        </div>
+
+        <!-- Customer Care -->
+        <div class="space-y-4">
+          <h4 class="text-sm font-bold text-white tracking-wider uppercase">Customer Care</h4>
+          <ul class="space-y-3 text-sm text-stone-400">
+            <li><a class="hover:text-amber-300 transition-colors duration-200" href="javascript:void(0)" onclick="showToast('Contact Us: hello@guiltfreecravings.com | +91 XXXXX XXXXX')">Contact Us</a></li>
+            <li><a class="hover:text-amber-300 transition-colors duration-200" href="javascript:void(0)" onclick="showToast('FAQs: Shelf life is 45 days. Store at room temperature.')">FAQs</a></li>
+            <li><a class="hover:text-amber-300 transition-colors duration-200" href="javascript:void(0)" onclick="showToast('Privacy Policy: All data 256-bit encrypted.')">Privacy Policy</a></li>
+            <li><a class="hover:text-amber-300 transition-colors duration-200" href="javascript:void(0)" onclick="showToast('Terms & Conditions: View full terms at checkout.')">Terms & Conditions</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="space-y-4">
+          <h4 class="text-sm font-bold text-white tracking-wider uppercase">Contact</h4>
+          <div class="space-y-3 text-sm text-stone-400">
+            <div class="flex items-start space-x-2">
+              <span class="text-lg">📧</span>
+              <div>
+                <p class="font-semibold text-amber-200 text-xs mb-1">Email:</p>
+                <a href="mailto:hello@guiltfreecravings.com" class="hover:text-amber-300 transition-colors duration-200">hello@guiltfreecravings.com</a>
+              </div>
+            </div>
+            <div class="flex items-start space-x-2">
+              <span class="text-lg">📱</span>
+              <div>
+                <p class="font-semibold text-amber-200 text-xs mb-1">Phone:</p>
+                <p>+91 XXXXX XXXXX</p>
+              </div>
+            </div>
+            <div class="flex items-start space-x-2">
+              <span class="text-lg">📍</span>
+              <div>
+                <p class="font-semibold text-amber-200 text-xs mb-1">Location:</p>
+                <p>Delhi, India</p>
+              </div>
+            </div>
+          </div>
+          <div class="pt-4">
+            <a
+              href="#products"
+              class="inline-block bg-brand-amber hover:bg-brand-gold text-white text-sm font-bold px-6 py-2.5 rounded-full transition-colors duration-200 shadow-sm"
+            >
+              Shop Now
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="pt-10 mt-10 border-t border-stone-800 text-center sm:flex sm:justify-between sm:items-center text-sm text-stone-500">
+        <p>© 2026 GuiltFree Cravings. Handcrafted in India with pure love.</p>
+        <p class="mt-3 sm:mt-0 text-amber-200/70">100% Desi Cow Ghee • Zero White Sugar • No Preservatives</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ========================================== -->
+  <!-- 11. SLIDE-OVER CART DRAWER                 -->
+  <!-- ========================================== -->
+  <div id="cartDrawer" class="fixed inset-0 z-50 overflow-hidden hidden pointer-events-none" data-purpose="cart-drawer">
+    <!-- Backdrop -->
+    <div id="cartBackdrop" onclick="toggleCartDrawer(false)" class="absolute inset-0 modal-backdrop opacity-0 transition-opacity duration-300 ease-in-out pointer-events-auto"></div>
+    
+    <div class="fixed inset-y-0 right-0 max-w-full flex pl-10">
+      <div id="cartPanel" class="w-screen max-w-md bg-white shadow-2xl flex flex-col transform translate-x-full drawer-transition pointer-events-auto">
+        
+        <!-- Drawer Header -->
+        <div class="p-5 border-b border-stone-200 bg-brand-warmBg/50 flex items-center justify-between">
+          <div class="flex items-center space-x-2">
+            <h3 class="font-serif text-lg font-bold text-brand-dark">Your Goodness Bag</h3>
+            <span id="drawerBadge" class="bg-brand-amber text-white text-[10px] font-bold px-2 py-0.5 rounded-full">0 items</span>
+          </div>
+          <button onclick="toggleCartDrawer(false)" class="p-2 text-stone-400 hover:text-stone-700 rounded-full hover:bg-stone-200 transition">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Tiered Free Shipping & Milestone Tracker -->
+        <div class="p-4 bg-amber-50/80 border-b border-amber-200/70">
+          <div class="flex justify-between text-xs font-semibold text-brand-brown mb-1.5">
+            <span id="shippingText">Add treats to unlock <strong>FREE Shipping!</strong></span>
+            <span id="shippingValue" class="font-bold text-brand-amber">₹499 away</span>
+          </div>
+          <div class="w-full bg-amber-200/80 h-2 rounded-full overflow-hidden">
+            <div id="shippingBar" class="bg-gradient-to-r from-amber-500 to-amber-600 h-full rounded-full transition-all duration-500" style="width: 0%"></div>
+          </div>
+        </div>
+
+        <!-- Drawer Cart Items List -->
+        <div id="cartItemsContainer" class="flex-1 overflow-y-auto p-5 space-y-4 divide-y divide-stone-100">
+          <!-- Populated dynamically by JS -->
+        </div>
+
+        <!-- Coupon Code Box -->
+        <div class="px-5 py-2.5 bg-brand-cream border-t border-stone-200">
+          <div class="flex items-center space-x-2">
+            <input
+              id="couponInput"
+              type="text"
+              placeholder="Coupon code (Try: GUILTFREE10)"
+              class="text-xs uppercase font-mono px-3 py-1.5 border border-stone-300 rounded-lg flex-1 focus:ring-brand-gold focus:border-brand-gold bg-white"
+            />
+            <button
+              onclick="applyCoupon()"
+              class="text-xs bg-brand-brown text-white font-bold px-3 py-1.5 rounded-lg hover:bg-brand-dark transition"
+            >
+              Apply
+            </button>
+          </div>
+          <p id="couponMsg" class="text-[10px] font-semibold mt-1 hidden"></p>
+        </div>
+
+        <!-- Drawer Footer with Subtotal & Checkout CTA -->
+        <div class="p-5 border-t border-stone-200 bg-brand-cream/80 space-y-3">
+          <div class="space-y-1.5 text-xs text-stone-600">
+            <div class="flex justify-between">
+              <span>Subtotal</span>
+              <span id="drawerSubtotal" class="font-bold text-stone-900 text-sm">₹0</span>
+            </div>
+            <div id="discountRow" class="hidden justify-between text-emerald-700 font-semibold">
+              <span>Promo Discount (10%)</span>
+              <span id="drawerDiscount">- ₹0</span>
+            </div>
+            <div class="flex justify-between">
+              <span>Estimated GST (5%)</span>
+              <span class="text-stone-500">Included in prices</span>
+            </div>
+            <div class="flex justify-between text-emerald-700 font-medium">
+              <span>Express Shipping</span>
+              <span id="drawerShippingCost">₹0</span>
+            </div>
+          </div>
+
+          <div class="border-t border-stone-200 pt-2 flex justify-between items-baseline">
+            <span class="text-sm font-bold text-stone-900">Total Amount</span>
+            <span id="drawerTotal" class="text-xl font-bold text-brand-amber font-mono">₹0</span>
+          </div>
+
+          <!-- Checkout button -->
+          <button
+            onclick="handleCheckout()"
+            class="w-full bg-brand-brown hover:bg-brand-dark text-white font-semibold py-3 px-6 rounded-full shadow-lg hover:shadow-xl transition flex items-center justify-center space-x-2 border border-brand-gold/30"
+          >
+            <span>Proceed to Secure Checkout</span>
+            <svg class="w-4 h-4 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+            </svg>
+          </button>
+
+          <p class="text-[10px] text-center text-stone-400">
+            🔒 256-bit Encrypted Checkout • UPI, Cards & COD Accepted
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- 12. INTERACTIVE QUICK-VIEW PRODUCT MODAL   -->
+  <!-- ========================================== -->
+  <div id="productModal" class="fixed inset-0 z-50 overflow-y-auto hidden" data-purpose="quick-view-modal">
+    <div class="min-h-screen px-4 text-center flex items-center justify-center py-6">
+      <!-- Backdrop -->
+      <div class="fixed inset-0 modal-backdrop transition-opacity" onclick="closeProductModal()"></div>
+      
+      <!-- Modal Box -->
+      <div class="inline-block w-full max-w-4xl p-5 sm:p-7 my-8 text-left align-middle transition-all transform bg-white shadow-2xl rounded-3xl relative z-10 border border-brand-border">
+        
+        <!-- Close button -->
+        <button onclick="closeProductModal()" class="absolute top-4 right-4 p-2 rounded-full text-stone-400 hover:text-stone-700 hover:bg-stone-100 transition focus:outline-none z-20">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+          
+          <!-- Left: Multi-photo Gallery -->
+          <div class="md:col-span-6 space-y-3">
+            <div class="bg-brand-warmBg/60 rounded-2xl p-4 border border-stone-200 aspect-square flex items-center justify-center overflow-hidden relative group">
+              <img id="modalMainImg" src="" alt="Product View" class="w-full h-full object-cover rounded-xl shadow-xs group-hover:scale-105 transition-transform duration-500" />
+              <span id="modalImgBadge" class="absolute top-3 left-3 bg-brand-brown/90 text-amber-200 text-[10px] font-bold px-2.5 py-1 rounded-full">
+                100% Desi Ghee
+              </span>
+            </div>
+
+            <!-- Gallery Thumbnails -->
+            <div class="flex items-center space-x-2" id="modalThumbnails">
+              <!-- Rendered dynamically by JS -->
+            </div>
+
+            <!-- Health Highlight Bar -->
+            <div class="grid grid-cols-3 gap-2 text-center pt-2">
+              <div class="bg-brand-warmBg/70 p-2 rounded-lg border border-stone-200">
+                <span class="block text-[9px] uppercase font-bold text-stone-500">Sweetener</span>
+                <span class="text-xs font-bold text-brand-dark" id="modalPillSweetener">Dates / Jaggery</span>
+              </div>
+              <div class="bg-brand-warmBg/70 p-2 rounded-lg border border-stone-200">
+                <span class="block text-[9px] uppercase font-bold text-stone-500">Ghee</span>
+                <span class="text-xs font-bold text-brand-dark">100% Danedar</span>
+              </div>
+              <div class="bg-brand-warmBg/70 p-2 rounded-lg border border-stone-200">
+                <span class="block text-[9px] uppercase font-bold text-stone-500">Preservatives</span>
+                <span class="text-xs font-bold text-emerald-700">0% Added</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Product Details & Controls -->
+          <div class="md:col-span-6 space-y-4">
+            <div>
+              <div class="flex items-center space-x-2">
+                <span id="modalTag" class="text-[10px] bg-amber-100 text-brand-brown font-bold px-2.5 py-0.5 rounded-full border border-amber-300/60">
+                  Best Seller
+                </span>
+                <span id="modalRating" class="text-xs text-amber-600 font-bold">4.9 ★ (420 reviews)</span>
+              </div>
+              <h2 id="modalTitle" class="text-2xl sm:text-3xl font-serif font-bold text-brand-dark mt-1">
+                Dry Fruit Sattu Laddoo
+              </h2>
+              <p id="modalDesc" class="text-stone-600 text-xs sm:text-sm mt-2 leading-relaxed">
+                Roasted sattu - trusted for generations as a powerhouse of strength - blended with almonds, cashews and bonded with pure desi ghee.
+              </p>
+            </div>
+
+            <!-- Weight Variant Selector -->
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider text-stone-500 mb-2">Select Net Weight:</label>
+              <div class="flex space-x-2.5" id="modalVariantOptions">
+                <!-- Javascript toggles here -->
+              </div>
+            </div>
+
+            <!-- Price & Savings -->
+            <div class="flex items-baseline space-x-3 pt-1">
+              <span id="modalPrice" class="text-3xl font-bold font-mono text-brand-amber">₹250</span>
+              <span id="modalMrp" class="text-sm text-stone-400 line-through">₹299</span>
+              <span id="modalDiscountBadge" class="text-xs text-emerald-700 font-bold bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded-full">Save 16%</span>
+            </div>
+
+            <!-- Quantity Stepper & Add to Cart -->
+            <div class="flex items-center space-x-3 pt-1">
+              <div class="flex items-center border border-stone-300 rounded-full bg-stone-50 px-3 py-2 shadow-xs">
+                <button onclick="adjustModalQty(-1)" class="text-stone-600 hover:text-stone-900 font-bold px-2 text-sm">-</button>
+                <span id="modalQtyVal" class="w-7 text-center text-xs font-bold text-stone-800">1</span>
+                <button onclick="adjustModalQty(1)" class="text-stone-600 hover:text-stone-900 font-bold px-2 text-sm">+</button>
+              </div>
+
+              <button
+                id="modalAddToCartBtn"
+                onclick="handleModalAddToCart()"
+                class="flex-1 bg-brand-brown hover:bg-brand-dark text-white font-semibold py-3 px-6 rounded-full transition shadow-md flex items-center justify-center space-x-2 border border-brand-gold/30 active:scale-95"
+              >
+                <span>Add to Bag</span>
+                <span id="modalAddPrice">· ₹250</span>
+              </button>
+            </div>
+
+            <!-- Pincode Delivery Check Input -->
+            <div class="pt-3 border-t border-stone-200">
+              <label class="block text-[11px] font-bold text-stone-600 uppercase tracking-wider mb-1">Check Estimated Delivery:</label>
+              <div class="flex items-center space-x-2">
+                <input
+                  id="pincodeInput"
+                  type="text"
+                  maxlength="6"
+                  placeholder="Enter 6-digit Pincode (e.g. 110001)"
+                  class="text-xs border-stone-300 rounded-lg py-1.5 px-3 flex-1 focus:ring-brand-gold focus:border-brand-gold"
+                />
+                <button
+                  onclick="checkPincode()"
+                  class="text-xs bg-stone-800 hover:bg-stone-900 text-white font-semibold px-4 py-1.5 rounded-lg transition"
+                >
+                  Verify
+                </button>
+              </div>
+              <p id="pincodeResult" class="text-xs font-semibold mt-1.5"></p>
+            </div>
+
+            <!-- Accordion Details -->
+            <div class="pt-1 text-xs divide-y divide-stone-200">
+              <details class="py-2 cursor-pointer group" open>
+                <summary class="font-bold text-stone-800 flex justify-between items-center group-hover:text-brand-amber">
+                  <span>Ingredients & Nutrition</span>
+                  <span class="text-base text-stone-400 group-open:rotate-45 transition-transform">+</span>
+                </summary>
+                <p id="modalIngredientsText" class="mt-2 text-stone-600 leading-relaxed pl-1 text-[11px]">
+                  Slow-roasted chana sattu, pure cow desi ghee, organic dates/jaggery, California almonds, cashew nibs, green cardamom. High protein, rich in dietary fiber.
+                </p>
+              </details>
+
+              <details class="py-2 cursor-pointer group">
+                <summary class="font-bold text-stone-800 flex justify-between items-center group-hover:text-brand-amber">
+                  <span>Freshness & Storage Guidance</span>
+                  <span class="text-base text-stone-400 group-open:rotate-45 transition-transform">+</span>
+                </summary>
+                <p class="mt-2 text-stone-600 leading-relaxed pl-1 text-[11px]">
+                  Store at room temperature in airtight container away from direct sunlight. Shelf life: 45 days from date of dispatch. Made fresh in small kitchen batches.
+                </p>
+              </details>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- 13. WISHLIST DRAWER MODAL                  -->
+  <!-- ========================================== -->
+  <div id="wishlistModal" class="fixed inset-0 z-50 overflow-hidden hidden pointer-events-none">
+    <div id="wishlistBackdrop" onclick="toggleWishlistModal(false)" class="fixed inset-0 modal-backdrop opacity-0 transition-opacity duration-300 pointer-events-auto"></div>
+    <div class="fixed inset-y-0 right-0 max-w-full flex pl-10">
+      <div id="wishlistPanel" class="w-screen max-w-sm bg-white shadow-2xl flex flex-col transform translate-x-full drawer-transition pointer-events-auto">
+        
+        <div class="p-5 border-b border-stone-200 bg-brand-warmBg/50 flex items-center justify-between">
+          <h3 class="font-serif text-lg font-bold text-brand-dark flex items-center gap-2">
+            <span>❤️</span>
+            <span>Saved Sweets</span>
+          </h3>
+          <button onclick="toggleWishlistModal(false)" class="p-2 text-stone-400 hover:text-stone-700 rounded-full">✕</button>
+        </div>
+
+        <div id="wishlistItemsContainer" class="flex-1 overflow-y-auto p-5 space-y-3">
+          <!-- Populated dynamically by JS -->
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- 13.5. LOGIN MODAL                          -->
+  <!-- ========================================== -->
+  <div id="loginModal" class="fixed inset-0 z-50 overflow-y-auto hidden" data-purpose="login-modal">
+    <div class="min-h-screen px-4 text-center flex items-center justify-center py-6">
+      <!-- Backdrop -->
+      <div class="fixed inset-0 modal-backdrop transition-opacity" onclick="closeLoginModal()"></div>
+      
+      <!-- Modal Box -->
+      <div class="inline-block w-full max-w-md p-6 sm:p-8 my-8 text-left align-middle transition-all transform bg-white shadow-2xl rounded-3xl relative z-10 border border-brand-border">
+        
+        <!-- Close button -->
+        <button onclick="closeLoginModal()" class="absolute top-4 right-4 p-2 rounded-full text-stone-400 hover:text-stone-700 hover:bg-stone-100 transition focus:outline-none">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+
+        <div class="text-center mb-6">
+          <div class="flex items-center justify-center mb-3">
+            <div class="w-12 h-12 rounded-full overflow-hidden border-2 border-brand-gold/60">
+              <img src="assets/images/logo.jpg" alt="GuiltFree Cravings" class="w-full h-full object-cover" />
+            </div>
+          </div>
+          <h2 class="text-2xl font-serif font-bold text-brand-dark">Welcome Back</h2>
+          <p class="text-xs text-stone-600 mt-1">Login to your GuiltFree account</p>
+        </div>
+
+        <form onsubmit="handleLogin(event)" class="space-y-4">
+          
+          <div>
+            <label class="block text-xs font-bold text-stone-700 mb-1.5">Email Address</label>
+            <input
+              type="email"
+              id="loginEmail"
+              placeholder="your@email.com"
+              required
+              class="w-full px-4 py-2.5 text-sm border border-stone-300 rounded-lg focus:ring-2 focus:ring-brand-gold focus:border-brand-gold transition"
+            />
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-stone-700 mb-1.5">Password</label>
+            <input
+              type="password"
+              id="loginPassword"
+              placeholder="Enter your password"
+              required
+              class="w-full px-4 py-2.5 text-sm border border-stone-300 rounded-lg focus:ring-2 focus:ring-brand-gold focus:border-brand-gold transition"
+            />
+          </div>
+
+          <div class="flex items-center justify-between text-xs">
+            <label class="flex items-center space-x-2 cursor-pointer">
+              <input type="checkbox" class="rounded border-stone-300 text-brand-amber focus:ring-brand-gold" />
+              <span class="text-stone-600">Remember me</span>
+            </label>
+            <a href="javascript:void(0)" onclick="showToast('Password reset link sent to your email!')" class="text-brand-amber hover:text-brand-gold font-semibold">Forgot Password?</a>
+          </div>
+
+          <button
+            type="submit"
+            class="w-full bg-brand-brown hover:bg-brand-dark text-white font-semibold py-3 px-6 rounded-full shadow-lg hover:shadow-xl transition border border-brand-gold/30 active:scale-95"
+          >
+            Login to Account
+          </button>
+
+        </form>
+
+        <div class="mt-6 pt-6 border-t border-stone-200 text-center">
+          <p class="text-xs text-stone-600">
+            Don't have an account? 
+            <a href="javascript:void(0)" onclick="showToast('Registration coming soon! For now, contact us at hello@guiltfreecravings.com')" class="text-brand-amber hover:text-brand-gold font-bold">Create Account</a>
+          </p>
+        </div>
+
+        <div class="mt-4 text-center">
+          <p class="text-[10px] text-stone-400">
+            🔒 Your data is secure and encrypted
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- 14. FLOATING TOAST NOTIFICATION            -->
+  <!-- ========================================== -->
+  <div id="toastNotification" class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 ease-out bg-brand-dark text-white px-4 py-3 rounded-2xl shadow-2xl border border-brand-gold/40 flex items-center space-x-3 pointer-events-none">
+    <span id="toastIcon" class="text-xl">✨</span>
+    <p id="toastMessage" class="text-xs font-semibold text-amber-100">Item added to cart</p>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- 15. CORE JAVASCRIPT DATABASE & STATE       -->
+  <!-- ========================================== -->
+  <script>
+    // Primary Product Database with Real Images & Metadata
+    const products = [
+      {
+        id: 0,
+        name: "Dry Fruit Sattu Laddoo",
+        category: "sattu",
+        tag: "Best Seller",
+        rating: "4.9 ★ (420)",
+        description: "Roasted chana sattu trusted for generations as an ayurvedic source of stamina, blended with California almonds, cashews & pure cow desi ghee.",
+        image: "assets/images/dry_fruit_sattu_laddoo_product.jpg",
+        jarImage: "assets/images/dry_fruit_sattu_laddoo_packaging_jar.jpg",
+        nutritionChip: "⚡ High Protein Sattu",
+        sweetener: "Organic Jaggery & Dates",
+        ingredients: "Slow-roasted chana sattu, 100% pure danedar cow ghee, organic jaggery, California almonds, cashew nuts, green cardamom.",
+        variants: [
+          { weight: "250g", price: 250, mrp: 299 },
+          { weight: "500g", price: 500, mrp: 580 }
+        ],
+        selectedVariantIndex: 0
+      },
+      {
+        id: 1,
+        name: "Besan Badam Laddoo",
+        category: "besan",
+        tag: "Desi Ghee Classic",
+        rating: "4.8 ★ (310)",
+        description: "Coarse gram flour slow-roasted until golden brown and aromatic. Packed with whole almond crunch and pure desi cow ghee.",
+        image: "assets/images/besan_badam_laddoo_product.jpg",
+        jarImage: "assets/images/Catalogue-New Design_V2.jpg",
+        nutritionChip: "🧈 100% Desi Cow Ghee",
+        sweetener: "Raw Organic Jaggery",
+        ingredients: "Coarse besan (gram flour), pure cow ghee, raw desi jaggery, toasted California almonds, green cardamom seeds.",
+        variants: [
+          { weight: "250g", price: 215, mrp: 260 },
+          { weight: "500g", price: 430, mrp: 499 }
+        ],
+        selectedVariantIndex: 0
+      },
+      {
+        id: 2,
+        name: "Dates Delight Laddoo",
+        category: "dates",
+        tag: "100% Date Sweetened",
+        rating: "4.9 ★ (580)",
+        description: "Finest Arabian dates, roasted cashews, watermelon seeds, and desi ghee rolled without a single grain of cane sugar. Rich, chewy bliss.",
+        image: "assets/images/dates_delight_laddoo_product.jpg",
+        jarImage: "assets/images/dates_delight_laddoo_packaging_jar.jpg",
+        nutritionChip: "🍯 0g Added Cane Sugar",
+        sweetener: "100% Medjool Dates Only",
+        ingredients: "Soft Medjool dates, roasted cashew nibs, watermelon seeds, 100% cow desi ghee, nutmeg, green cardamom.",
+        variants: [
+          { weight: "250g", price: 315, mrp: 380 },
+          { weight: "500g", price: 630, mrp: 720 }
+        ],
+        selectedVariantIndex: 0
+      },
+      {
+        id: 3,
+        name: "Classic Sattu Laddoo",
+        category: "sattu",
+        tag: "Ayurvedic Fuel",
+        rating: "4.7 ★ (190)",
+        description: "Long before synthetic protein shakes, Indian households reached for roasted sattu — a grain built for honest stamina and steady digestion.",
+        image: "assets/images/sattu_laddoo_product.jpg",
+        jarImage: "assets/images/dry_fruit_sattu_laddoo_packaging_jar.jpg",
+        nutritionChip: "🌾 14g Plant Protein / 100g",
+        sweetener: "Desi Jaggery",
+        ingredients: "Roasted gram flour (sattu), pure danedar cow ghee, organic jaggery powder, crushed cardamom.",
+        variants: [
+          { weight: "250g", price: 165, mrp: 210 },
+          { weight: "500g", price: 330, mrp: 390 }
+        ],
+        selectedVariantIndex: 0
+      },
+      // Traditional Glass Jar Gifts
+      {
+        id: 4,
+        name: "Traditional Glass Jar — Dry Fruit Sattu",
+        category: "glass-jar",
+        tag: "Festive Gift Edition",
+        rating: "5.0 ★ (110)",
+        description: "Our signature Dry Fruit Sattu recipe packed in an airtight, reusable luxury glass decanter. Perfect for festive gifting and keepsakes.",
+        image: "assets/images/dry_fruit_sattu_laddoo_packaging_jar.jpg",
+        jarImage: "assets/images/dry_fruit_sattu_laddoo_product.jpg",
+        nutritionChip: "🏺 Reusable Decanter Jar",
+        sweetener: "Organic Jaggery & Dates",
+        ingredients: "Signature Dry Fruit Sattu Laddoos encased in a high-clarity airtight decanter glass jar with golden seal.",
+        variants: [
+          { weight: "350g", price: 350, mrp: 420 },
+          { weight: "700g", price: 500, mrp: 599 }
+        ],
+        selectedVariantIndex: 0
+      },
+      {
+        id: 5,
+        name: "Traditional Glass Jar — Dates Delight",
+        category: "glass-jar",
+        tag: "Luxury Keepsake",
+        rating: "4.9 ★ (95)",
+        description: "100% natural date confection rolled with cashew nibs and roasted seeds, packaged in an airtight heritage glass keepsake decanter.",
+        image: "assets/images/dates_delight_laddoo_packaging_jar.jpg",
+        jarImage: "assets/images/dates_delight_laddoo_product.jpg",
+        nutritionChip: "✨ Pure Date Sweetened",
+        sweetener: "Medjool Dates Only",
+        ingredients: "Dates Delight Laddoos packed in a heavy-base food grade decanter jar.",
+        variants: [
+          { weight: "350g", price: 500, mrp: 590 },
+          { weight: "700g", price: 790, mrp: 899 }
+        ],
+        selectedVariantIndex: 0
+      }
+    ];
+
+    // Shopping Cart State (Persisted in localStorage)
+    let cart = JSON.parse(localStorage.getItem('gfc_cart')) || [];
+    let wishlist = JSON.parse(localStorage.getItem('gfc_wishlist')) || [];
+    let activeCoupon = null;
+
+    // Modal State
+    let activeModalProductId = 0;
+    let modalSelectedVariantIndex = 0;
+    let modalQuantity = 1;
+    let currentModalImg = "";
+
+    // Save cart state
+    function saveCart() {
+      localStorage.setItem('gfc_cart', JSON.stringify(cart));
+      updateCartUI();
+    }
+
+    // Save wishlist state
+    function saveWishlist() {
+      localStorage.setItem('gfc_wishlist', JSON.stringify(wishlist));
+      updateWishlistUI();
+    }
+
+    // Toast Notification helper
+    function showToast(message, icon = "✨") {
+      const toast = document.getElementById('toastNotification');
+      document.getElementById('toastIcon').textContent = icon;
+      document.getElementById('toastMessage').textContent = message;
+
+      toast.classList.remove('translate-y-20', 'opacity-0');
+      toast.classList.add('translate-y-0', 'opacity-100');
+
+      setTimeout(() => {
+        toast.classList.remove('translate-y-0', 'opacity-100');
+        toast.classList.add('translate-y-20', 'opacity-0');
+      }, 2500);
+    }
+
+    // ==========================================
+    // RENDER PRODUCTS
+    // ==========================================
+    function renderProducts() {
+      const container = document.getElementById('productContainer');
+      const glassContainer = document.getElementById('glassJarContainer');
+
+      const standardItems = products.filter(p => p.category !== 'glass-jar');
+      const glassJarItems = products.filter(p => p.category === 'glass-jar');
+
+      container.innerHTML = standardItems.map(p => createProductCardHtml(p)).join('');
+      glassContainer.innerHTML = glassJarItems.map(p => createGlassJarCardHtml(p)).join('');
+    }
+
+    function createProductCardHtml(product) {
+      const activeVar = product.variants[product.selectedVariantIndex];
+      const isWishlisted = wishlist.includes(product.id);
+      const discount = Math.round(((activeVar.mrp - activeVar.price) / activeVar.mrp) * 100);
+
+      return `
+        <div id="card-${product.id}" class="product-card bg-white rounded-3xl p-4 border border-brand-border hover:shadow-luxury-hover transition-all duration-300 flex flex-col justify-between group relative">
+          
+          <div>
+            <!-- Top Badges & Wishlist -->
+            <div class="flex items-center justify-between mb-2.5">
+              <span class="text-[10px] font-bold uppercase tracking-wider bg-amber-100/90 text-brand-brown px-2.5 py-0.5 rounded-full border border-amber-300/60">
+                ${product.tag}
+              </span>
+              <button
+                onclick="toggleWishlistItem(${product.id})"
+                class="p-1.5 text-stone-300 hover:text-red-500 transition-colors"
+                title="Save to Wishlist"
+              >
+                <svg class="w-5 h-5 ${isWishlisted ? 'text-red-500 fill-current' : 'fill-none stroke-current'}" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                </svg>
+              </button>
+            </div>
+
+            <!-- Clickable Product Image Frame -->
+            <div onclick="openProductModal(${product.id})" class="cursor-pointer product-img-container rounded-2xl overflow-hidden bg-brand-warmBg aspect-[4/3] relative shadow-inner">
+              <img
+                id="card-img-${product.id}"
+                src="${product.image}"
+                alt="${product.name}"
+                class="w-full h-full object-cover"
+              />
+              <span class="absolute bottom-2 left-2 bg-brand-brown/90 backdrop-blur-xs text-amber-200 text-[9px] font-bold px-2 py-0.5 rounded-md">
+                ${product.nutritionChip}
+              </span>
+            </div>
+
+            <!-- Product Info -->
+            <div class="mt-3">
+              <div class="flex items-center justify-between text-[11px] mb-1">
+                <span class="text-amber-600 font-bold">${product.rating}</span>
+                <span class="text-emerald-700 font-bold text-[10px]">✓ 100% Desi Ghee</span>
+              </div>
+              <h3 onclick="openProductModal(${product.id})" class="cursor-pointer font-serif font-bold text-base text-brand-dark group-hover:text-brand-amber transition line-clamp-1">
+                ${product.name}
+              </h3>
+              <p class="text-stone-500 text-xs mt-1 line-clamp-2 leading-relaxed">
+                ${product.description}
+              </p>
+            </div>
+          </div>
+
+          <!-- Pack Size Variants & Add Button (Targeted DOM) -->
+          <div class="mt-4 pt-3 border-t border-stone-100">
+            <div class="flex items-center justify-between text-xs text-stone-500 mb-2">
+              <span class="font-medium text-[11px]">Pack:</span>
+              <div class="flex space-x-1.5" id="variant-btns-${product.id}">
+                ${product.variants.map((v, idx) => `
+                  <button
+                    onclick="selectVariant(${product.id}, ${idx})"
+                    class="px-2.5 py-1 rounded-lg text-xs font-bold transition ${product.selectedVariantIndex === idx ? 'bg-brand-brown text-white shadow-xs' : 'bg-stone-100 text-stone-700 hover:bg-stone-200'}"
+                  >
+                    ${v.weight}
+                  </button>
+                `).join('')}
+              </div>
+            </div>
+
+            <!-- Price & Quick Add Button -->
+            <div class="flex items-center justify-between mt-2.5">
+              <div>
+                <span id="price-${product.id}" class="text-lg font-bold font-mono text-brand-dark">₹${activeVar.price}</span>
+                <span id="mrp-${product.id}" class="text-xs text-stone-400 line-through ml-1">₹${activeVar.mrp}</span>
+              </div>
+
+              <button
+                id="btn-add-${product.id}"
+                onclick="quickAddToCart(${product.id})"
+                class="bg-brand-brown hover:bg-brand-dark text-white text-xs font-bold px-4 py-2 rounded-full transition flex items-center space-x-1.5 active:scale-95 shadow-sm border border-brand-gold/30"
+              >
+                <span>Add</span>
+                <span class="text-amber-300 font-bold">+</span>
+              </button>
+            </div>
+          </div>
+
+        </div>
+      `;
+    }
+
+    function createGlassJarCardHtml(product) {
+      const activeVar = product.variants[product.selectedVariantIndex];
+      const isWishlisted = wishlist.includes(product.id);
+
+      return `
+        <div id="card-${product.id}" class="product-card bg-white rounded-3xl p-5 border-2 border-brand-gold/30 hover:border-brand-gold shadow-luxury hover:shadow-luxury-hover transition-all duration-300 flex flex-col justify-between group">
+          
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-[10px] font-bold uppercase tracking-wider bg-amber-100 text-brand-brown px-3 py-0.5 rounded-full border border-amber-300/60">
+                ${product.tag}
+              </span>
+              <div class="flex items-center space-x-2">
+                <span class="text-xs font-bold text-amber-600">${product.rating}</span>
+                <button onclick="toggleWishlistItem(${product.id})" class="text-stone-300 hover:text-red-500">
+                  <svg class="w-5 h-5 ${isWishlisted ? 'text-red-500 fill-current' : 'fill-none stroke-current'}" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <div onclick="openProductModal(${product.id})" class="cursor-pointer grid grid-cols-1 sm:grid-cols-12 gap-5 items-center">
+              <div class="sm:col-span-5 rounded-2xl overflow-hidden bg-brand-warmBg aspect-square relative shadow-inner product-img-container">
+                <img src="${product.image}" alt="${product.name}" class="w-full h-full object-cover" />
+                <span class="absolute bottom-2 left-2 bg-brand-brown/90 text-amber-200 text-[9px] font-bold px-2 py-0.5 rounded">
+                  Reusable Decanter
+                </span>
+              </div>
+              
+              <div class="sm:col-span-7">
+                <h3 class="font-serif font-bold text-lg text-brand-dark group-hover:text-brand-amber transition">${product.name}</h3>
+                <p class="text-xs text-stone-600 mt-1.5 leading-relaxed">${product.description}</p>
+                
+                <div class="mt-3 flex items-center space-x-2" id="variant-btns-${product.id}">
+                  ${product.variants.map((v, idx) => `
+                    <button
+                      onclick="event.stopPropagation(); selectVariant(${product.id}, ${idx})"
+                      class="px-3 py-1 rounded-lg text-xs font-bold transition ${product.selectedVariantIndex === idx ? 'bg-brand-brown text-white shadow-xs' : 'bg-stone-100 text-stone-700 hover:bg-stone-200'}"
+                    >
+                      ${v.weight}
+                    </button>
+                  `).join('')}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-5 pt-3 border-t border-stone-100 flex items-center justify-between">
+            <div>
+              <span id="price-${product.id}" class="text-xl font-bold font-mono text-brand-amber">₹${activeVar.price}</span>
+              <span id="mrp-${product.id}" class="text-xs text-stone-400 line-through ml-1.5">₹${activeVar.mrp}</span>
+            </div>
+            
+            <button
+              id="btn-add-${product.id}"
+              onclick="quickAddToCart(${product.id})"
+              class="bg-brand-amber hover:bg-brand-gold text-white font-bold text-xs px-5 py-2.5 rounded-full shadow-sm transition active:scale-95"
+            >
+              Add Gift Jar
+            </button>
+          </div>
+
+        </div>
+      `;
+    }
+
+    // Targeted variant selection (No full-page re-rendering)
+    function selectVariant(productId, variantIndex) {
+      const product = products.find(p => p.id === productId);
+      if (!product) return;
+
+      product.selectedVariantIndex = variantIndex;
+      const activeVar = product.variants[variantIndex];
+
+      // Update Card Price and MRP
+      const priceEl = document.getElementById(`price-${productId}`);
+      const mrpEl = document.getElementById(`mrp-${productId}`);
+      if (priceEl && mrpEl) {
+        priceEl.textContent = `₹${activeVar.price}`;
+        mrpEl.textContent = `₹${activeVar.mrp}`;
+      }
+
+      // Update Variant Buttons Style
+      const btnsContainer = document.getElementById(`variant-btns-${productId}`);
+      if (btnsContainer) {
+        btnsContainer.innerHTML = product.variants.map((v, idx) => `
+          <button
+            onclick="${product.category === 'glass-jar' ? 'event.stopPropagation(); ' : ''}selectVariant(${product.id}, ${idx})"
+            class="px-2.5 py-1 rounded-lg text-xs font-bold transition ${idx === variantIndex ? 'bg-brand-brown text-white shadow-xs' : 'bg-stone-100 text-stone-700 hover:bg-stone-200'}"
+          >
+            ${v.weight}
+          </button>
+        `).join('');
+      }
+    }
+
+    // ==========================================
+    // SHOPPING CART & SHIPPING GAMIFICATION
+    // ==========================================
+    function quickAddToCart(productId) {
+      const product = products.find(p => p.id === productId);
+      if (!product) return;
+
+      const variant = product.variants[product.selectedVariantIndex];
+      const existingIndex = cart.findIndex(item => item.productId === productId && item.variantWeight === variant.weight);
+
+      if (existingIndex > -1) {
+        cart[existingIndex].quantity += 1;
+      } else {
+        cart.push({
+          productId: product.id,
+          variantWeight: variant.weight,
+          price: variant.price,
+          quantity: 1,
+          name: product.name,
+          image: product.image
+        });
+      }
+
+      // Micro button animation
+      const btn = document.getElementById(`btn-add-${productId}`);
+      if (btn) {
+        const origText = btn.innerHTML;
+        btn.innerHTML = `<span>✓ Added</span>`;
+        btn.classList.add('bg-emerald-700');
+        setTimeout(() => {
+          btn.innerHTML = origText;
+          btn.classList.remove('bg-emerald-700');
+        }, 1200);
+      }
+
+      saveCart();
+      showToast(`${product.name} (${variant.weight}) added to your bag!`, "🛍️");
+    }
+
+    function changeCartQty(index, delta) {
+      cart[index].quantity += delta;
+      if (cart[index].quantity <= 0) {
+        cart.splice(index, 1);
+      }
+      saveCart();
+    }
+
+    function removeCartItem(index) {
+      const removed = cart.splice(index, 1);
+      saveCart();
+      if (removed.length > 0) {
+        showToast(`Removed ${removed[0].name}`, "🗑️");
+      }
+    }
+
+    function toggleCartDrawer(open) {
+      const drawer = document.getElementById('cartDrawer');
+      const backdrop = document.getElementById('cartBackdrop');
+      const panel = document.getElementById('cartPanel');
+
+      if (open) {
+        drawer.classList.remove('hidden');
+        setTimeout(() => {
+          backdrop.classList.remove('opacity-0');
+          backdrop.classList.add('opacity-100');
+          panel.classList.remove('translate-x-full');
+          panel.classList.add('translate-x-0');
+        }, 10);
+      } else {
+        backdrop.classList.remove('opacity-100');
+        backdrop.classList.add('opacity-0');
+        panel.classList.remove('translate-x-0');
+        panel.classList.add('translate-x-full');
+        setTimeout(() => {
+          drawer.classList.add('hidden');
+        }, 300);
+      }
+    }
+
+    function updateCartUI() {
+      const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+      const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+
+      // Header Badges
+      document.getElementById('cartCountBadge').textContent = totalItems;
+      const mobileBadge = document.getElementById('cartCountBadgeMobile');
+      if (mobileBadge) {
+        mobileBadge.textContent = totalItems;
+      }
+      document.getElementById('cartHeaderTotal').textContent = `₹${subtotal.toLocaleString()}`;
+      document.getElementById('drawerBadge').textContent = `${totalItems} items`;
+
+      // Free Shipping Milestone Gamification (Threshold: ₹499)
+      const threshold = 499;
+      const shippingBar = document.getElementById('shippingBar');
+      const shippingText = document.getElementById('shippingText');
+      const shippingValue = document.getElementById('shippingValue');
+      const shippingCostEl = document.getElementById('drawerShippingCost');
+
+      let shippingCost = 0;
+      if (subtotal >= threshold || totalItems === 0) {
+        shippingBar.style.width = totalItems === 0 ? '0%' : '100%';
+        if (totalItems === 0) {
+          shippingText.innerHTML = `Add treats to unlock <strong>FREE Express Shipping!</strong>`;
+          shippingValue.textContent = `₹${threshold} away`;
+          shippingCost = 0;
+          shippingCostEl.textContent = "₹0";
+        } else {
+          shippingBar.style.width = '100%';
+          shippingText.innerHTML = `🎉 You unlocked <strong>FREE Express Shipping!</strong>`;
+          shippingValue.textContent = 'FREE';
+          shippingCost = 0;
+          shippingCostEl.textContent = "FREE";
+        }
+      } else {
+        const remaining = threshold - subtotal;
+        const percent = Math.min(100, Math.max(10, (subtotal / threshold) * 100));
+        shippingBar.style.width = `${percent}%`;
+        shippingText.innerHTML = `Add <strong>₹${remaining}</strong> more for FREE Shipping!`;
+        shippingValue.textContent = `₹${remaining} away`;
+        shippingCost = 50;
+        shippingCostEl.textContent = "₹50";
+      }
+
+      // Calculate Discount
+      let discountAmount = 0;
+      const discountRow = document.getElementById('discountRow');
+      if (activeCoupon === 'GUILTFREE10') {
+        discountAmount = Math.round(subtotal * 0.10);
+        discountRow.classList.remove('hidden');
+        discountRow.classList.add('flex');
+        document.getElementById('drawerDiscount').textContent = `- ₹${discountAmount.toLocaleString()}`;
+      } else {
+        discountRow.classList.remove('flex');
+        discountRow.classList.add('hidden');
+      }
+
+      const finalTotal = Math.max(0, subtotal - discountAmount + (subtotal > 0 ? shippingCost : 0));
+      document.getElementById('drawerSubtotal').textContent = `₹${subtotal.toLocaleString()}`;
+      document.getElementById('drawerTotal').textContent = `₹${finalTotal.toLocaleString()}`;
+
+      // Populate Items list or Empty State
+      const container = document.getElementById('cartItemsContainer');
+      if (cart.length === 0) {
+        container.innerHTML = `
+          <div class="py-12 text-center">
+            <div class="w-16 h-16 rounded-full bg-brand-warmBg flex items-center justify-center mx-auto text-2xl mb-3 shadow-inner">
+              🛍️
+            </div>
+            <p class="font-serif font-bold text-stone-800 text-base">Your treat bag is empty</p>
+            <p class="text-xs text-stone-500 mt-1 max-w-xs mx-auto">Add handcrafted desi ghee laddoos to treat yourself and your family!</p>
+            <button
+              onclick="toggleCartDrawer(false)"
+              class="mt-4 text-xs font-bold bg-brand-brown text-white px-5 py-2.5 rounded-full shadow-sm hover:bg-brand-dark transition"
+            >
+              Explore All Sweets
+            </button>
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = cart.map((item, index) => {
+        return `
+          <div class="pt-3.5 first:pt-0 flex items-center space-x-3">
+            <div class="w-14 h-14 rounded-xl bg-stone-100 overflow-hidden shrink-0 border border-stone-200">
+              <img src="${item.image}" alt="${item.name}" class="w-full h-full object-cover" />
+            </div>
+            
+            <div class="flex-1 min-w-0">
+              <h4 class="text-xs font-bold text-brand-dark truncate">${item.name}</h4>
+              <p class="text-[10px] text-stone-500">${item.variantWeight} · ₹${item.price} each</p>
+              
+              <div class="flex items-center space-x-3 mt-1.5">
+                <div class="flex items-center border border-stone-300 rounded-md bg-stone-50">
+                  <button onclick="changeCartQty(${index}, -1)" class="px-2 py-0.5 text-xs text-stone-600 hover:text-black font-bold">-</button>
+                  <span class="px-2 py-0.5 text-xs font-bold text-stone-800">${item.quantity}</span>
+                  <button onclick="changeCartQty(${index}, 1)" class="px-2 py-0.5 text-xs text-stone-600 hover:text-black font-bold">+</button>
+                </div>
+                <button onclick="removeCartItem(${index})" class="text-[10px] text-stone-400 hover:text-red-600 underline">Remove</button>
+              </div>
+            </div>
+
+            <div class="text-right shrink-0">
+              <span class="text-sm font-bold font-mono text-brand-dark">₹${(item.price * item.quantity).toLocaleString()}</span>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function applyCoupon() {
+      const code = document.getElementById('couponInput').value.trim().toUpperCase();
+      const msg = document.getElementById('couponMsg');
+
+      if (code === 'GUILTFREE10') {
+        activeCoupon = 'GUILTFREE10';
+        msg.textContent = "✓ Coupon GUILTFREE10 applied! (10% OFF)";
+        msg.className = "text-[10px] font-bold text-emerald-700 mt-1 block";
+        updateCartUI();
+        showToast("10% Discount Applied!", "🎉");
+      } else if (code === '') {
+        activeCoupon = null;
+        msg.className = "hidden";
+        updateCartUI();
+      } else {
+        msg.textContent = "Invalid coupon. Try: GUILTFREE10";
+        msg.className = "text-[10px] font-bold text-rose-600 mt-1 block";
+      }
+    }
+
+    function handleCheckout() {
+      if (cart.length === 0) {
+        showToast("Your cart is empty!", "🛍️");
+        return;
+      }
+      const total = document.getElementById('drawerTotal').textContent;
+      alert(`🎉 Ready for dispatch!\nRedirecting to 256-bit Secure Payment Gateway (UPI / Cards / NetBanking / COD)\nTotal Amount Payable: ${total}`);
+    }
+
+    // ==========================================
+    // INTERACTIVE QUICK VIEW MODAL
+    // ==========================================
+    function openProductModal(productId) {
+      const product = products.find(p => p.id === productId);
+      if (!product) return;
+
+      activeModalProductId = productId;
+      modalSelectedVariantIndex = product.selectedVariantIndex;
+      modalQuantity = 1;
+      currentModalImg = product.image;
+
+      document.getElementById('modalTitle').textContent = product.name;
+      document.getElementById('modalDesc').textContent = product.description;
+      document.getElementById('modalTag').textContent = product.tag;
+      document.getElementById('modalRating').textContent = product.rating;
+      document.getElementById('modalMainImg').src = currentModalImg;
+      document.getElementById('modalPillSweetener').textContent = product.sweetener;
+      document.getElementById('modalIngredientsText').textContent = product.ingredients;
+      document.getElementById('modalQtyVal').textContent = modalQuantity;
+      document.getElementById('pincodeResult').textContent = "";
+      document.getElementById('pincodeInput').value = "";
+
+      // Render Modal Thumbnails
+      const thumbsContainer = document.getElementById('modalThumbnails');
+      thumbsContainer.innerHTML = `
+        <button onclick="switchModalImg('${product.image}', this)" class="w-14 h-14 rounded-xl overflow-hidden border-2 border-brand-amber shadow-xs">
+          <img src="${product.image}" class="w-full h-full object-cover" />
+        </button>
+        ${product.jarImage ? `
+          <button onclick="switchModalImg('${product.jarImage}', this)" class="w-14 h-14 rounded-xl overflow-hidden border border-stone-300 opacity-70 hover:opacity-100 shadow-xs">
+            <img src="${product.jarImage}" class="w-full h-full object-cover" />
+          </button>
+        ` : ''}
+      `;
+
+      renderModalVariants(product);
+      updateModalPrice(product);
+
+      document.getElementById('productModal').classList.remove('hidden');
+    }
+
+    function switchModalImg(imgSrc, btn) {
+      document.getElementById('modalMainImg').src = imgSrc;
+      document.querySelectorAll('#modalThumbnails button').forEach(b => {
+        b.classList.remove('border-brand-amber', 'border-2');
+        b.classList.add('border-stone-300', 'border', 'opacity-70');
+      });
+      btn.classList.add('border-brand-amber', 'border-2');
+      btn.classList.remove('opacity-70');
+    }
+
+    function renderModalVariants(product) {
+      const container = document.getElementById('modalVariantOptions');
+      container.innerHTML = product.variants.map((v, idx) => `
+        <button
+          onclick="setModalVariant(${idx})"
+          class="flex-1 py-2 px-3 rounded-xl text-xs font-bold transition border ${idx === modalSelectedVariantIndex ? 'bg-brand-brown text-white border-brand-brown shadow-sm' : 'bg-stone-50 text-stone-700 border-stone-300 hover:bg-stone-100'}"
+        >
+          ${v.weight}
+        </button>
+      `).join('');
+    }
+
+    function setModalVariant(idx) {
+      modalSelectedVariantIndex = idx;
+      const product = products.find(p => p.id === activeModalProductId);
+      renderModalVariants(product);
+      updateModalPrice(product);
+    }
+
+    function updateModalPrice(product) {
+      const currentVar = product.variants[modalSelectedVariantIndex];
+      const discount = Math.round(((currentVar.mrp - currentVar.price) / currentVar.mrp) * 100);
+
+      document.getElementById('modalPrice').textContent = `₹${currentVar.price}`;
+      document.getElementById('modalMrp').textContent = `₹${currentVar.mrp}`;
+      document.getElementById('modalDiscountBadge').textContent = `Save ${discount}%`;
+      document.getElementById('modalAddPrice').textContent = `· ₹${currentVar.price * modalQuantity}`;
+    }
+
+    function adjustModalQty(delta) {
+      modalQuantity = Math.max(1, modalQuantity + delta);
+      document.getElementById('modalQtyVal').textContent = modalQuantity;
+      const product = products.find(p => p.id === activeModalProductId);
+      updateModalPrice(product);
+    }
+
+    function handleModalAddToCart() {
+      const product = products.find(p => p.id === activeModalProductId);
+      const variant = product.variants[modalSelectedVariantIndex];
+
+      const existingIndex = cart.findIndex(item => item.productId === product.id && item.variantWeight === variant.weight);
+      if (existingIndex > -1) {
+        cart[existingIndex].quantity += modalQuantity;
+      } else {
+        cart.push({
+          productId: product.id,
+          variantWeight: variant.weight,
+          price: variant.price,
+          quantity: modalQuantity,
+          name: product.name,
+          image: product.image
+        });
+      }
+
+      saveCart();
+      closeProductModal();
+      toggleCartDrawer(true);
+      showToast(`Added ${modalQuantity}x ${product.name} to your bag!`, "🛍️");
+    }
+
+    function closeProductModal() {
+      document.getElementById('productModal').classList.add('hidden');
+    }
+
+    // Dynamic Delivery Date Pincode Estimator
+    function checkPincode() {
+      const pin = document.getElementById('pincodeInput').value.trim();
+      const res = document.getElementById('pincodeResult');
+
+      if (pin.length === 6 && !isNaN(pin)) {
+        const today = new Date();
+        const deliveryDate = new Date(today);
+        deliveryDate.setDate(today.getDate() + 2);
+        const dateStr = deliveryDate.toLocaleDateString('en-IN', { weekday: 'short', month: 'short', day: 'numeric' });
+
+        res.innerHTML = `✓ Available for PIN <strong>${pin}</strong>! <br/><span class="text-emerald-800">⚡ Estimated Delivery by <strong>${dateStr}</strong></span>`;
+        res.className = "text-xs text-emerald-700 font-medium mt-1.5 leading-tight";
+      } else {
+        res.textContent = "Please enter a valid 6-digit Indian PIN code.";
+        res.className = "text-xs text-rose-600 font-semibold mt-1.5";
+      }
+    }
+
+    // ==========================================
+    // WISHLIST MANAGEMENT
+    // ==========================================
+    function toggleWishlistItem(productId) {
+      const index = wishlist.indexOf(productId);
+      const product = products.find(p => p.id === productId);
+
+      if (index > -1) {
+        wishlist.splice(index, 1);
+        showToast(`Removed from saved sweets`, "💔");
+      } else {
+        wishlist.push(productId);
+        showToast(`Saved ${product.name} to Wishlist!`, "❤️");
+      }
+
+      saveWishlist();
+      renderProducts();
+    }
+
+    function toggleWishlistModal(open) {
+      const modal = document.getElementById('wishlistModal');
+      const backdrop = document.getElementById('wishlistBackdrop');
+      const panel = document.getElementById('wishlistPanel');
+
+      if (open) {
+        modal.classList.remove('hidden');
+        setTimeout(() => {
+          backdrop.classList.remove('opacity-0');
+          backdrop.classList.add('opacity-100');
+          panel.classList.remove('translate-x-full');
+          panel.classList.add('translate-x-0');
+        }, 10);
+      } else {
+        backdrop.classList.remove('opacity-100');
+        backdrop.classList.add('opacity-0');
+        panel.classList.remove('translate-x-0');
+        panel.classList.add('translate-x-full');
+        setTimeout(() => {
+          modal.classList.add('hidden');
+        }, 300);
+      }
+    }
+
+    function updateWishlistUI() {
+      document.getElementById('wishlistCountBadge').textContent = wishlist.length;
+      const container = document.getElementById('wishlistItemsContainer');
+
+      if (wishlist.length === 0) {
+        container.innerHTML = `
+          <div class="py-12 text-center text-stone-500">
+            <span class="text-4xl">❤️</span>
+            <p class="font-serif font-bold text-stone-800 mt-2">No saved sweets yet</p>
+            <p class="text-xs text-stone-500 mt-1">Tap the heart icon on any sweet to save it for later!</p>
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = wishlist.map(id => {
+        const p = products.find(prod => prod.id === id);
+        if (!p) return '';
+        const v = p.variants[0];
+        return `
+          <div class="bg-brand-warmBg/70 p-3 rounded-2xl border border-brand-border flex items-center space-x-3">
+            <img src="${p.image}" class="w-12 h-12 rounded-xl object-cover shrink-0" />
+            <div class="flex-1 min-w-0">
+              <h4 class="text-xs font-bold text-brand-dark truncate">${p.name}</h4>
+              <p class="text-[11px] text-brand-amber font-mono font-bold">₹${v.price} (${v.weight})</p>
+            </div>
+            <div class="flex flex-col gap-1 shrink-0">
+              <button
+                onclick="quickAddToCart(${p.id}); toggleWishlistModal(false);"
+                class="text-[10px] bg-brand-brown hover:bg-brand-dark text-white font-bold px-2.5 py-1 rounded-full shadow-xs"
+              >
+                + Add
+              </button>
+              <button
+                onclick="toggleWishlistItem(${p.id})"
+                class="text-[9px] text-stone-400 hover:text-red-600 text-center"
+              >
+                Remove
+              </button>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    // ==========================================
+    // LOGIN MODAL FUNCTIONS
+    // ==========================================
+    function openLoginModal() {
+      const modal = document.getElementById('loginModal');
+      modal.classList.remove('hidden');
+      // Focus on email input after modal opens
+      setTimeout(() => {
+        document.getElementById('loginEmail').focus();
+      }, 100);
+    }
+
+    function closeLoginModal() {
+      const modal = document.getElementById('loginModal');
+      modal.classList.add('hidden');
+    }
+
+    function handleLogin(event) {
+      event.preventDefault();
+      const email = document.getElementById('loginEmail').value;
+      const password = document.getElementById('loginPassword').value;
+
+      // This is a placeholder authentication flow
+      // In production, this would connect to your backend API
+      if (email && password) {
+        showToast('✓ Login successful! Welcome back to GuiltFree Cravings');
+        closeLoginModal();
+        
+        // Clear form
+        document.getElementById('loginEmail').value = '';
+        document.getElementById('loginPassword').value = '';
+        
+        // Optional: Store user session in localStorage
+        // localStorage.setItem('userEmail', email);
+      } else {
+        showToast('❌ Please enter valid credentials');
+      }
+    }
+
+    // Close modal on Escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        closeLoginModal();
+      }
+    });
+
+    // ==========================================
+    // MOBILE MENU TOGGLE
+    // ==========================================
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobileMenu');
+      const btn = document.getElementById('mobileMenuBtn');
+      
+      if (menu.classList.contains('hidden')) {
+        menu.classList.remove('hidden');
+        // Change icon to X
+        btn.innerHTML = '<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>';
+      } else {
+        menu.classList.add('hidden');
+        // Change icon back to hamburger
+        btn.innerHTML = '<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>';
+      }
+    }
+
+    // Close mobile menu when clicking on a link
+    document.addEventListener('DOMContentLoaded', function() {
+      const mobileMenu = document.getElementById('mobileMenu');
+      if (mobileMenu) {
+        const links = mobileMenu.querySelectorAll('a');
+        links.forEach(link => {
+          link.addEventListener('click', function() {
+            mobileMenu.classList.add('hidden');
+            const btn = document.getElementById('mobileMenuBtn');
+            btn.innerHTML = '<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>';
+          });
+        });
+      }
+    });
+
+    // ==========================================
+    // DYNAMIC LIVE SEARCH & FILTERING
+    // ==========================================
+    function handleSearch(val) {
+      const dropdown = document.getElementById('searchDropdown');
+      const resultsContainer = document.getElementById('searchResultsContainer');
+      const clearBtn = document.getElementById('clearSearchBtn');
+
+      if (val.trim().length > 0) {
+        clearBtn.classList.remove('hidden');
+      } else {
+        clearBtn.classList.add('hidden');
+      }
+
+      if (val.trim().length < 2) {
+        dropdown.classList.add('hidden');
+        return;
+      }
+
+      const query = val.toLowerCase();
+      const filtered = products.filter(p =>
+        p.name.toLowerCase().includes(query) ||
+        p.description.toLowerCase().includes(query) ||
+        p.ingredients.toLowerCase().includes(query)
+      );
+
+      if (filtered.length === 0) {
+        resultsContainer.innerHTML = `
+          <div class="py-4 text-center text-xs text-stone-500">
+            No sweets found matching "<strong>${val}</strong>"
+          </div>
+        `;
+      } else {
+        resultsContainer.innerHTML = filtered.map(p => `
+          <div onclick="quickSelectProduct(${p.id})" class="cursor-pointer p-2 hover:bg-brand-warmBg/80 rounded-xl flex items-center justify-between transition">
+            <div class="flex items-center space-x-2.5">
+              <img src="${p.image}" class="w-10 h-10 rounded-lg object-cover" />
+              <div>
+                <p class="text-xs font-bold text-brand-dark">${p.name}</p>
+                <p class="text-[10px] text-stone-500">${p.variants[0].weight} · ₹${p.variants[0].price}</p>
+              </div>
+            </div>
+            <button class="text-xs bg-brand-brown text-white px-2.5 py-1 rounded-full font-bold">
+              View
+            </button>
+          </div>
+        `).join('');
+      }
+
+      dropdown.classList.remove('hidden');
+    }
+
+    function clearSearch() {
+      document.getElementById('searchInput').value = "";
+      document.getElementById('searchDropdown').classList.add('hidden');
+      document.getElementById('clearSearchBtn').classList.add('hidden');
+    }
+
+    function quickSelectProduct(id) {
+      clearSearch();
+      openProductModal(id);
+    }
+
+    // Close search dropdown when clicking outside
+    document.addEventListener('click', (e) => {
+      const searchBox = document.getElementById('searchInput');
+      const dropdown = document.getElementById('searchDropdown');
+      if (!searchBox.contains(e.target) && !dropdown.contains(e.target)) {
+        dropdown.classList.add('hidden');
+      }
+    });
+
+    // Category Filter Handler
+    function filterCategory(cat, btnElement) {
+      document.querySelectorAll('.category-pill').forEach(btn => {
+        btn.classList.remove('bg-brand-brown', 'text-white', 'shadow-xs');
+        btn.classList.add('bg-brand-warmBg', 'text-stone-700');
+      });
+
+      if (btnElement) {
+        btnElement.classList.add('bg-brand-brown', 'text-white', 'shadow-xs');
+        btnElement.classList.remove('bg-brand-warmBg', 'text-stone-700');
+      }
+
+      if (cat === 'all') {
+        renderProducts();
+        return;
+      }
+
+      const container = document.getElementById('productContainer');
+      const filtered = products.filter(p => p.category === cat);
+      container.innerHTML = filtered.map(p => createProductCardHtml(p)).join('');
+    }
+
+    // Sorting functionality
+    function sortProducts(criterion) {
+      if (criterion === 'price-low') {
+        products.sort((a, b) => a.variants[0].price - b.variants[0].price);
+      } else if (criterion === 'price-high') {
+        products.sort((a, b) => b.variants[0].price - a.variants[0].price);
+      } else if (criterion === 'rating') {
+        products.sort((a, b) => parseFloat(b.rating) - parseFloat(a.rating));
+      }
+      renderProducts();
+    }
+
+    function handleNewsletterSignup() {
+      const input = document.getElementById('newsletterInput');
+      if (input.value && input.value.includes('@')) {
+        showToast("Subscribed! Use code GUILTFREE10 for 10% off.", "🎁");
+        input.value = "";
+      } else {
+        showToast("Please enter a valid email address.", "⚠️");
+      }
+    }
+
+    // Keydown ESC listener to close open modals
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeProductModal();
+        toggleCartDrawer(false);
+        toggleWishlistModal(false);
+      }
+    });
+
+    // Initialize application on page load
+    window.addEventListener('DOMContentLoaded', () => {
+      renderProducts();
+      updateCartUI();
+      updateWishlistUI();
+    });
+  </script>
+</body>
+</html>
