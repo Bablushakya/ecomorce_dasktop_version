@@ -1,21 +1,335 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="scroll-smooth" lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Besan Badam Laddoo | Order Online - GuiltFree Cravings</title>
-  <meta name="description" content="Aromatic Besan Badam Laddoo made with coarse gram flour slow-roasted in Desi Ghee, toasted California almonds, and raw desi jaggery. Zero refined sugar, zero preservatives.">
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Besan Badam Laddoo - Order Online | GuiltFree Cravings</title>
+  <meta name="description" content="Aromatic Besan Badam Laddoo made with slow-roasted gram flour, Desi Ghee, California almonds, and organic jaggery. Traditional flavor, zero refined sugar. Starting at ₹215." />
+  
+  <!-- Open Graph Meta Tags -->
   <meta property="og:title" content="Besan Badam Laddoo | GuiltFree Cravings" />
-  <meta property="og:description" content="A rich, slow-roasted heritage laddoo packed with premium almonds and Desi Ghee. Sweetened exclusively with natural jaggery. Starting at ₹215." />
+  <meta property="og:description" content="Rich heritage laddoo with premium almonds & Desi Ghee. From ₹215" />
   <meta property="og:image" content="../../assets/images/besan_badam_laddoo_product.jpg" />
+  <meta property="og:url" content="https://guiltfree-dasktopversion.vercel.app/products/besan-badam-laddoo" />
   <meta property="og:type" content="product" />
+  
+  <link rel="canonical" href="https://guiltfree-dasktopversion.vercel.app/products/besan-badam-laddoo" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Dancing+Script:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
   <script>
-    window.location.replace('/#products/besan-badam-laddoo');
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              dark: '#1F4A2C',
+              brown: '#B5697A',
+              brownLight: '#C67B8D',
+              amber: '#B5697A',
+              gold: '#D4A245',
+              goldLight: '#E0B55F',
+              goldPale: '#FEF3C7',
+              cream: '#FCF9F2',
+              warmBg: '#F5EFE6',
+              cardBg: '#FFFFFF',
+              border: '#E8DFD3',
+              borderLight: '#F0E9DF',
+              emerald: '#15803D',
+              forestGreen: '#1F4A2C',
+              mauve: '#B5697A'
+            }
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            display: ['"Cinzel"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'sans-serif'],
+            script: ['"Dancing Script"', 'cursive']
+          }
+        }
+      }
+    }
   </script>
+
+  <style>
+    ::-webkit-scrollbar { width: 8px; height: 8px; }
+    ::-webkit-scrollbar-track { background: #F5EFE6; }
+    ::-webkit-scrollbar-thumb { background: #D1C4B5; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #B5697A; }
+  </style>
 </head>
-<body>
-  <h1>Besan Badam Laddoo</h1>
-  <p>Coarse besan (gram flour), Desi Ghee, raw desi jaggery, toasted California almonds, green cardamom seeds.</p>
-  <p>Variants: 250g (₹215), 500g (₹430).</p>
-  <p><a href="/#products/besan-badam-laddoo">Click here to view interactive product page and order</a></p>
+
+<body class="bg-brand-cream text-brand-forestGreen font-sans antialiased">
+
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-brand-border shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+      <a href="../../" class="flex items-center gap-2.5 group">
+        <div class="relative w-10 h-10 rounded-full overflow-hidden border-2 border-brand-gold/60 shadow-sm">
+          <img src="../../assets/images/logo.jpg" alt="GuiltFree Cravings Logo" class="w-full h-full object-cover" />
+        </div>
+        <div>
+          <span class="font-serif text-lg sm:text-xl font-bold text-brand-forestGreen block leading-none">
+            Guilt<span class="text-brand-gold">Free</span> Cravings
+          </span>
+          <span class="text-[10px] uppercase font-bold tracking-wider text-brand-mauve block">Laddoo Ordering</span>
+        </div>
+      </a>
+      
+      <div class="flex items-center gap-3">
+        <a href="../../#products" class="text-sm font-semibold text-brand-forestGreen hover:text-brand-mauve transition px-4 py-2 rounded-full hover:bg-brand-warmBg/50">
+          ← All Laddoos
+        </a>
+        <a href="https://wa.me/919667760119?text=Hi%2C%20I%20want%20to%20order%20Besan%20Badam%20Laddoo" 
+           target="_blank" 
+           rel="noopener"
+           class="bg-brand-mauve hover:bg-brand-brown text-white font-bold text-sm px-6 py-2.5 rounded-full transition shadow-md">
+          Order on WhatsApp
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    
+    <nav class="text-xs text-stone-500 mb-6">
+      <a href="../../" class="hover:text-brand-mauve">Home</a>
+      <span class="mx-2">/</span>
+      <a href="../../#products" class="hover:text-brand-mauve">Products</a>
+      <span class="mx-2">/</span>
+      <span class="text-brand-forestGreen font-semibold">Besan Badam Laddoo</span>
+    </nav>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+      
+      <div class="space-y-4">
+        <div class="bg-white rounded-3xl p-6 border border-brand-border shadow-lg">
+          <div class="relative rounded-2xl overflow-hidden bg-brand-warmBg aspect-square">
+            <img src="../../assets/images/besan_badam_laddoo_product.jpg" 
+                 alt="Besan Badam Laddoo - Heritage Recipe with Almonds"
+                 class="w-full h-full object-cover" />
+            <span class="absolute top-4 left-4 bg-brand-gold/95 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-md">
+              🎊 Traditional Classic
+            </span>
+          </div>
+        </div>
+        
+        <div class="grid grid-cols-3 gap-3">
+          <div class="bg-white p-4 rounded-xl border border-brand-border text-center">
+            <span class="text-2xl block mb-1">🧈</span>
+            <p class="text-xs font-bold text-brand-forestGreen">Desi Ghee</p>
+          </div>
+          <div class="bg-white p-4 rounded-xl border border-brand-border text-center">
+            <span class="text-2xl block mb-1">🍯</span>
+            <p class="text-xs font-bold text-brand-forestGreen">No Refined Sugar</p>
+          </div>
+          <div class="bg-white p-4 rounded-xl border border-brand-border text-center">
+            <span class="text-2xl block mb-1">🌱</span>
+            <p class="text-xs font-bold text-brand-forestGreen">No Preservatives</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="space-y-6">
+        
+        <div>
+          <span class="inline-block text-xs font-bold uppercase tracking-wider bg-amber-100/90 text-brand-mauve px-3 py-1 rounded-full border border-amber-300/60 mb-3">
+            Aromatic & Nostalgic
+          </span>
+          <h1 class="text-4xl sm:text-5xl font-serif font-bold text-brand-forestGreen mb-3 leading-tight">
+            Besan Badam Laddoo
+          </h1>
+          <p class="text-brand-mauve text-lg font-semibold mb-4">
+            Pure Desi Ghee | Raw Organic Jaggery
+          </p>
+          <p class="text-stone-600 leading-relaxed">
+            A rich, slow-roasted heritage laddoo packed with premium California almonds and Desi Ghee. Sweetened exclusively with natural jaggery to give you the ultimate traditional flavor without any compromises. Perfect for festive celebrations and gifting!
+          </p>
+          
+          <div class="flex items-center gap-3 mt-4 pt-4 border-t border-stone-200">
+            <span class="text-amber-500 text-lg">★★★★★</span>
+            <span class="font-bold text-brand-forestGreen">4.8 / 5.0</span>
+            <span class="text-stone-400">·</span>
+            <span class="text-sm text-stone-600">310+ Reviews</span>
+          </div>
+        </div>
+
+        <div class="bg-emerald-50/50 border border-emerald-200 rounded-2xl p-5">
+          <h3 class="font-serif font-bold text-brand-forestGreen text-lg mb-3">Nutrition Facts (per 100g)</h3>
+          <div class="grid grid-cols-2 gap-3 text-sm">
+            <div class="flex justify-between">
+              <span class="text-stone-600">Energy:</span>
+              <span class="font-bold text-brand-forestGreen">490 kcal</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-stone-600">Protein:</span>
+              <span class="font-bold text-brand-forestGreen">11g</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-stone-600">Carbohydrates:</span>
+              <span class="font-bold text-brand-forestGreen">54g</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-stone-600">Good Fats:</span>
+              <span class="font-bold text-brand-forestGreen">26g</span>
+            </div>
+            <div class="flex justify-between col-span-2 pt-2 border-t border-emerald-200">
+              <span class="text-stone-600 font-semibold">Added Cane Sugar:</span>
+              <span class="font-bold text-emerald-700">0g ✓</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white border border-brand-border rounded-2xl p-6">
+          <h3 class="font-serif font-bold text-brand-forestGreen text-xl mb-4">Choose Your Size & Packaging</h3>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            
+            <div class="border-2 border-brand-mauve rounded-xl p-4 hover:shadow-lg transition">
+              <div class="flex items-start justify-between mb-3">
+                <div>
+                  <p class="font-bold text-brand-forestGreen text-lg">250g</p>
+                  <p class="text-xs text-stone-500">Plastic Box</p>
+                </div>
+                <span class="text-2xl font-bold text-brand-mauve">₹215</span>
+              </div>
+              <img src="../../assets/images/besan_badam_laddoo_product.jpg" 
+                   alt="250g Plastic Box"
+                   class="w-full h-32 object-cover rounded-lg mb-3" />
+              <a href="https://wa.me/919667760119?text=I%20want%20to%20order%20Besan%20Badam%20Laddoo%20250g%20Plastic%20Box%20-%20₹215" 
+                 target="_blank"
+                 class="block w-full bg-brand-mauve hover:bg-brand-brown text-white font-bold text-center py-2.5 rounded-full transition">
+                Order Now
+              </a>
+            </div>
+
+            <div class="border-2 border-stone-300 hover:border-brand-mauve rounded-xl p-4 hover:shadow-lg transition">
+              <div class="flex items-start justify-between mb-3">
+                <div>
+                  <p class="font-bold text-brand-forestGreen text-lg">500g</p>
+                  <p class="text-xs text-stone-500">Plastic Box</p>
+                </div>
+                <span class="text-2xl font-bold text-brand-mauve">₹430</span>
+              </div>
+              <img src="../../assets/images/besan_badam_laddoo_product.jpg" 
+                   alt="500g Plastic Box"
+                   class="w-full h-32 object-cover rounded-lg mb-3" />
+              <a href="https://wa.me/919667760119?text=I%20want%20to%20order%20Besan%20Badam%20Laddoo%20500g%20Plastic%20Box%20-%20₹430" 
+                 target="_blank"
+                 class="block w-full bg-brand-mauve hover:bg-brand-brown text-white font-bold text-center py-2.5 rounded-full transition">
+                Order Now
+              </a>
+            </div>
+
+          </div>
+
+          <p class="text-xs text-stone-500 mt-4 text-center">
+            💬 Prefer bulk orders or glass jar packaging? <a href="https://wa.me/919667760119" target="_blank" class="text-brand-mauve font-semibold hover:underline">WhatsApp us</a>
+          </p>
+        </div>
+
+        <div class="bg-amber-50/80 border border-amber-200 rounded-xl p-4 flex items-start gap-3">
+          <span class="text-2xl">⚡</span>
+          <div class="text-sm">
+            <p class="font-bold text-brand-forestGreen mb-1">Delivery: 24-48 Hours</p>
+            <p class="text-stone-600">Free delivery in Dwarka on orders above ₹500. Outside Dwarka via Porter (actuals).</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+      
+      <div class="bg-white border border-brand-border rounded-2xl p-6">
+        <h3 class="font-serif font-bold text-brand-forestGreen text-lg mb-3">🥄 Ingredients</h3>
+        <p class="text-sm text-stone-600 leading-relaxed">
+          Coarse besan (slow-roasted gram flour), Desi Ghee, raw desi jaggery, toasted California almonds, crushed green cardamom seeds.
+        </p>
+      </div>
+
+      <div class="bg-white border border-brand-border rounded-2xl p-6">
+        <h3 class="font-serif font-bold text-brand-forestGreen text-lg mb-3">💚 Health Benefits</h3>
+        <p class="text-sm text-stone-600 leading-relaxed">
+          Complex carbohydrates from roasted gram flour, wholesome fats from Desi Ghee, Vitamin E and healthy minerals from almonds. Traditional comfort food.
+        </p>
+      </div>
+
+      <div class="bg-white border border-brand-border rounded-2xl p-6">
+        <h3 class="font-serif font-bold text-brand-forestGreen text-lg mb-3">📦 Storage</h3>
+        <p class="text-sm text-stone-600 leading-relaxed">
+          Store at room temperature in an airtight container. Keeps fresh for 45 days from dispatch. No refrigeration needed.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="bg-gradient-to-br from-brand-mauve to-brand-brown text-white rounded-3xl p-8 sm:p-12 text-center shadow-2xl">
+      <h2 class="text-3xl sm:text-4xl font-serif font-bold mb-4">Ready to Order?</h2>
+      <p class="text-lg mb-6 opacity-90">Fresh handcrafted laddoos delivered to your doorstep in 24-48 hours</p>
+      <a href="https://wa.me/919667760119?text=Hi%2C%20I%20want%20to%20order%20Besan%20Badam%20Laddoo" 
+         target="_blank"
+         rel="noopener"
+         class="inline-block bg-white text-brand-mauve hover:bg-brand-cream font-bold text-lg px-10 py-4 rounded-full transition shadow-lg">
+        💬 Order on WhatsApp Now
+      </a>
+    </div>
+
+  </main>
+
+  <footer class="bg-brand-mauve text-stone-100 py-8 mt-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <p class="text-sm mb-2">© 2026 GuiltFree Cravings. All rights reserved.</p>
+      <p class="text-xs text-stone-200">Handcrafted with Desi Ghee • Zero Refined Sugar • No Preservatives</p>
+      <div class="mt-4">
+        <a href="../../#about-us" class="text-sm hover:text-amber-200 transition mx-3">About Us</a>
+        <a href="../../#contact-support" class="text-sm hover:text-amber-200 transition mx-3">Contact</a>
+        <a href="https://www.instagram.com/guiltfreecravings" target="_blank" class="text-sm hover:text-amber-200 transition mx-3">Instagram</a>
+      </div>
+    </div>
+  </footer>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org/",
+    "@type": "Product",
+    "name": "Besan Badam Laddoo",
+    "image": "https://guiltfree-dasktopversion.vercel.app/assets/images/besan_badam_laddoo_product.jpg",
+    "description": "Aromatic heritage laddoo made with slow-roasted besan, Desi Ghee, California almonds, and organic jaggery. Zero refined sugar.",
+    "brand": {
+      "@type": "Brand",
+      "name": "GuiltFree Cravings"
+    },
+    "offers": [
+      {
+        "@type": "Offer",
+        "price": "215",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock"
+      },
+      {
+        "@type": "Offer",
+        "price": "430",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock"
+      }
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "310"
+    },
+    "nutrition": {
+      "@type": "NutritionInformation",
+      "calories": "490 kcal",
+      "proteinContent": "11g",
+      "carbohydrateContent": "54g",
+      "fatContent": "26g"
+    }
+  }
+  </script>
+
 </body>
 </html>
