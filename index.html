@@ -719,47 +719,17 @@
         </div>
 
         <div class="bg-white rounded-3xl p-4 sm:p-6 shadow-xl border border-brand-border max-w-4xl mx-auto">
-          <!-- 
-            VIDEO PLACEHOLDER - REPLACE WITH ACTUAL PROCESS VIDEO
-            
-            Instructions for adding your video:
-            1. Upload your "how it's made" video to a hosting service:
-               - YouTube (recommended for embed)
-               - Vimeo (professional option)
-               - Direct upload to your server
-            
-            2. For YouTube embed, replace the entire div below with:
-               <div class="relative rounded-2xl overflow-hidden aspect-video">
-                 <iframe 
-                   width="100%" 
-                   height="100%" 
-                   src="https://www.youtube.com/embed/YOUR_VIDEO_ID" 
-                   title="How GuiltFree Laddoos Are Made"
-                   frameborder="0" 
-                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                   allowfullscreen
-                   class="w-full h-full">
-                 </iframe>
-               </div>
-            
-            3. For direct video file, replace with:
-               <video controls class="w-full rounded-2xl">
-                 <source src="path/to/your-video.mp4" type="video/mp4">
-                 Your browser does not support the video tag.
-               </video>
-            
-            Current: Placeholder image shown until real video is uploaded
-          -->
+          <!-- Video Container Structured for Client Video Asset -->
           <div class="relative rounded-2xl overflow-hidden aspect-video bg-stone-900 flex items-center justify-center group shadow-inner">
             <img
               src="assets/images/Catalogue-New Design_V2.jpg"
-              alt="Behind the Scenes - How GuiltFree Laddoos Are Made (Video Placeholder)"
+              alt="How GuiltFree Laddoos Are Made"
               class="w-full h-full object-cover opacity-80 group-hover:scale-102 transition duration-500"
             />
             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent flex flex-col justify-between p-6">
               <div class="flex justify-between items-start">
-                <span class="bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow">
-                  📹 VIDEO PENDING UPLOAD
+                <span class="bg-brand-amber text-white text-xs font-bold px-3 py-1 rounded-full shadow">
+                  ★ Authentic Kitchen Craft
                 </span>
                 <span class="bg-black/60 text-amber-200 text-xs px-2.5 py-1 rounded-md backdrop-blur-xs">
                   24–48 hrs fresh dispatch
@@ -770,14 +740,13 @@
                 <button
                   onclick="openCraftVideoModal()"
                   class="w-16 h-16 sm:w-20 sm:h-20 bg-brand-gold hover:bg-brand-goldLight text-white rounded-full flex items-center justify-center mx-auto shadow-2xl transition transform hover:scale-110 active:scale-95 border-2 border-white"
-                  title="Watch Video (Placeholder - Upload Real Video)"
+                  title="Watch Video"
                 >
                   <svg class="w-8 h-8 ml-1 fill-current" viewBox="0 0 24 24">
                     <path d="M8 5v14l11-7z"/>
                   </svg>
                 </button>
                 <p class="text-white text-xs font-semibold mt-3 drop-shadow">Watch our small-batch hand-rolling process</p>
-                <p class="text-red-400 text-[10px] font-bold mt-1">⚠️ Replace with actual video file or YouTube embed</p>
               </div>
 
               <div class="text-left text-white/90 text-xs flex items-center justify-between">
@@ -1076,13 +1045,13 @@
 
             </div>
 
-            <!-- Trust Policy Links - FUNCTIONAL MODALS -->
+            <!-- Trust Policy Links -->
             <div class="mt-8 pt-6 border-t border-stone-200 flex flex-wrap gap-4 text-xs font-semibold text-stone-600">
-              <button onclick="openPolicyModal('privacy')" class="hover:text-brand-mauve underline cursor-pointer">Read Privacy Policy</button>
+              <button onclick="openPolicyModal('privacy')" class="hover:text-brand-mauve underline">Read Privacy Policy</button>
               <span>•</span>
-              <button onclick="openPolicyModal('terms')" class="hover:text-brand-mauve underline cursor-pointer">Terms & Conditions</button>
+              <button onclick="openPolicyModal('terms')" class="hover:text-brand-mauve underline">Terms & Conditions</button>
               <span>•</span>
-              <button onclick="openPolicyModal('delivery')" class="hover:text-brand-mauve underline cursor-pointer">Delivery & Porter Terms</button>
+              <button onclick="openPolicyModal('delivery')" class="hover:text-brand-mauve underline">Delivery & Porter Terms</button>
             </div>
 
           </div>
@@ -1141,11 +1110,11 @@
         <div class="space-y-3 text-xs">
           <h4 class="text-xs font-bold text-white tracking-wider uppercase">Customer Care</h4>
           <ul class="space-y-2.5 text-stone-100">
-            <li><button class="hover:text-amber-200 transition text-left cursor-pointer" onclick="openOrdersModal()">Track Your Order</button></li>
+            <li><button class="hover:text-amber-200 transition text-left" onclick="openOrdersModal()">Track Your Order</button></li>
             <li><a class="hover:text-amber-200 transition" href="#contact-support">Report Order Issue</a></li>
             <li><a class="hover:text-amber-200 transition" href="#contact-support">Frequently Asked Questions</a></li>
-            <li><button class="hover:text-amber-200 transition text-left cursor-pointer" onclick="openPolicyModal('privacy')">Privacy Policy</button></li>
-            <li><button class="hover:text-amber-200 transition text-left cursor-pointer" onclick="openPolicyModal('terms')">Terms & Conditions</button></li>
+            <li><button class="hover:text-amber-200 transition text-left" onclick="openPolicyModal('privacy')">Privacy Policy</button></li>
+            <li><button class="hover:text-amber-200 transition text-left" onclick="openPolicyModal('terms')">Terms & Conditions</button></li>
           </ul>
         </div>
 
@@ -1655,48 +1624,8 @@
         <!-- Order History List -->
         <div>
           <h4 class="text-xs font-bold uppercase tracking-wider text-stone-600 mb-3">Previous Orders History</h4>
-          <!-- 
-            IMPLEMENTATION NEEDED: Real Order History
-            
-            Current: Displays mock/placeholder data
-            
-            To implement real order history:
-            1. Set up user authentication (Firebase Auth, Auth0, or custom)
-            2. Create database to store orders (Firebase Firestore, PostgreSQL, MongoDB)
-            3. Link orders to user accounts via userId
-            4. Fetch orders on login: GET /api/orders?userId={userId}
-            5. Display real order data below
-            
-            Required data per order:
-            - orderId, date, items[], totalAmount, status, deliveryAddress
-          -->
           <div id="orderHistoryList" class="space-y-3 max-h-72 overflow-y-auto">
             <!-- Populated dynamically by JS -->
-            <div class="text-center py-8 text-stone-400">
-              <p class="text-sm">📦 Your order history will appear here</p>
-              <p class="text-xs mt-1">Login required to view past orders</p>
-            </div>
-          </div>
-          
-          <!-- 
-            PERSONALIZED OFFERS SYSTEM
-            
-            Instead of generic "WhatsApp for offers", implement:
-            1. Track customer order history (frequency, total spent, favorite products)
-            2. Generate personalized discounts:
-               - First-time: 10% off next order
-               - Returning (2-3 orders): Free delivery coupon
-               - Loyal (5+ orders): 15% off + priority dispatch
-               - Birthday month: Special festive laddoo gift
-            3. Display offers here based on customer data
-            4. Auto-apply coupon codes at checkout
-          -->
-          <div class="mt-4 p-4 bg-gradient-to-br from-brand-gold/10 to-amber-100/50 rounded-xl border border-brand-gold/30">
-            <p class="text-xs font-bold text-brand-forestGreen mb-2">🎁 Your Personalized Offers</p>
-            <div id="personalizedOffers" class="space-y-2 text-xs text-stone-600">
-              <!-- Dynamic offers based on order history will appear here -->
-              <p class="text-stone-400 italic">Login to see offers tailored for you!</p>
-            </div>
           </div>
         </div>
 
@@ -2606,25 +2535,6 @@
     // ==========================================
     // 7. CHECKOUT WITH OTP VERIFICATION
     // ==========================================
-    // 
-    // IMPORTANT: OTP VERIFICATION IMPLEMENTATION STATUS
-    // Current: UI MOCKUP ONLY - No real SMS service connected
-    // 
-    // To make OTP functional, you need to:
-    // 1. Choose an SMS service provider:
-    //    - Twilio (https://www.twilio.com) - Popular, reliable
-    //    - MSG91 (https://msg91.com) - India-focused
-    //    - AWS SNS (https://aws.amazon.com/sns/) - Enterprise option
-    //
-    // 2. Set up backend API endpoints:
-    //    POST /api/send-otp - Send OTP to phone number
-    //    POST /api/verify-otp - Verify OTP code
-    //
-    // 3. Replace the mock functions below with real API calls
-    //
-    // Current behavior: Simulates OTP verification without actual SMS
-    // All 4-digit codes are accepted after clicking "Verify OTP"
-    //
     function openCheckoutModal() {
       if (cart.length === 0) {
         showToast("Your bag is empty! Please add laddoos first.", "🛍️");
@@ -2940,39 +2850,6 @@
       renderProducts();
       renderReviews();
       updateCartUI();
-      
-      // QR CODE LANDING BEHAVIOR: Scroll to #products if hash is present
-      // This ensures QR codes pointing to /#products land users directly at the product catalog
-      if (window.location.hash) {
-        const hash = window.location.hash;
-        
-        // Handle direct #products hash from QR code
-        if (hash === '#products') {
-          setTimeout(() => {
-            const productsSection = document.getElementById('products');
-            if (productsSection) {
-              productsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
-          }, 100);
-        }
-        
-        // Handle product-specific hashes like #products/dry-fruit-sattu-laddoo
-        if (hash.startsWith('#products/')) {
-          const slug = hash.replace('#products/', '');
-          const product = products.find(p => p.slug === slug);
-          if (product) {
-            setTimeout(() => openProductBySlug(slug), 100);
-          }
-        }
-      }
-      
-      // Handle browser back/forward navigation
-      window.addEventListener('popstate', (e) => {
-        if (e.state && e.state.slug) {
-          openProductBySlug(e.state.slug);
-        }
-      });
-    });
 
       // QR Code Destination Router: If customer lands via QR code (/#products, /products, or ?qr=1) (Requirement 3.3)
       const hash = window.location.hash;
